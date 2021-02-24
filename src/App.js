@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import Services from './components/Services';
 import Blog from './components/Blog';
 import Testimonials from './components/Testimonials';
-
+import Footer from './components/Footer';
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
         <Route path='/blog' component={Blog} exact />
         <Route path='/testimonials' component={Testimonials} exact />
       </Switch>
+      <Footer/>
     </>
   );
 }
