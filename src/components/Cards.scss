@@ -18,6 +18,8 @@
   transform-style: preserve-3d;
 }
 .flip-card:hover .flip-card-inner {
+  transition: transform 2s;
+  transition-delay: 0.5s;
   transform: rotateY(180deg);
 }
 .flip-card-front, .flip-card-back {
@@ -30,9 +32,6 @@
 .flip-card-front {
   background-color: none;
   color: black;
-  // background-color:#ddc;
-  // border:solid 5vmin #eee;
-  // border-bottom-color:#fff;
   border-left-color:#eee;
   border-radius:2px;
   border-right-color:#eee;
@@ -61,11 +60,6 @@
   margin: 10% 30% 10% 35%;
   width: 35%;
 }
-// #thankYou{
-//   background-color: white;
-//   color: black;
-//   height: 100px;
-// }
 #results{
   text-align: center;
 }
