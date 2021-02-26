@@ -6,6 +6,7 @@ import Services from './components/Services';
 import Blog from './components/Blog';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
+import './App.css';
 
 
 function App() {
