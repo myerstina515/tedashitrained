@@ -16,6 +16,8 @@ const Header = () => {
             <NavDropdown.Item id="item" href="/services">Services</NavDropdown.Item>
             <NavDropdown.Item id="item" href="/blog">Blog</NavDropdown.Item>
             <NavDropdown.Item id="item" href="/testimonials">Testimonials</NavDropdown.Item>
+            <NavDropdown.Item id="item" href="/aboutme">About Me</NavDropdown.Item>
+            <NavDropdown.Item id="item" href="/contact">Contact Me</NavDropdown.Item>
           </NavDropdown>
           {/* <Nav.Item>
             <Nav.Link id="item" href="/services">Services</Nav.Link>
