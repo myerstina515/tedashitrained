@@ -19,7 +19,7 @@ const Home = () => {
       name: emailAddress
     }
     console.log('this is the object: ', email)
-    await axios.post('https://tt-api-server.herokuapp.com/client', {email})
+    await axios.post('https://dina-cors-anywhere.herokuapp.com/https://tt-api-server.herokuapp.com/client', {email})
       .then(res => {
         console.log(res);
         console.log(res.data)
