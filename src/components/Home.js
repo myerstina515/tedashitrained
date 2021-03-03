@@ -12,14 +12,11 @@ const Home = () => {
   const emailSignUp = async (e) => {
     e.preventDefault();
     console.log('inside emailSignUp', emailAddress)
-    // const emailName = e.target.value;
-    // await setEmail(emailName);
-    // console.log('this is being set', e.target.value)
     const email = {
       name: emailAddress
     }
     console.log('this is the object: ', email)
-    await axios.post('https://dina-cors-anywhere.herokuapp.com/https://tt-api-server.herokuapp.com/client', {email})
+    await axios.post('https://tt-api-server.herokuapp.com/client', email)
       .then(res => {
         console.log(res);
         console.log(res.data)
