@@ -1,0 +1,21 @@
+#emailSignUp{
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+#emailInput{
+  width: 30vw;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-right: 15px;
+  outline: none;
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+#emailButton:hover{
+  background-color: darkred;
+  color: white;
+}

@@ -1,6 +1,7 @@
 # Tedashi Trained
 
 ## Created by: Tina Myers
+
 > heroku backend [here](https://tt-api-server.herokuapp.com/)
 
 ## Getting Started with Create React App
