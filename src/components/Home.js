@@ -4,6 +4,9 @@ import Cards from './Cards';
 import Video from './Video';
 import { useState } from 'react';
 import axios from 'axios';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import './Home.scss';
 
 
 const Home = () => {
@@ -24,19 +27,27 @@ const Home = () => {
   }
   const handleChange = (e) => {
     setEmail(e.target.value);
-    console.log('inside handleChange', emailAddress);
+    // console.log('inside handleChange', emailAddress);
   }
 
-  return(
+  return (
     <>
-      <ImageCarousel/>
-      <Cards/>
-      <Video/>
-      <form onSubmit={emailSignUp}>
+      <ImageCarousel />
+      <Cards />
+      <Video />
+      <Form id="emailSignUp" onSubmit={emailSignUp}>
+          <Form.Label>Sign up for our newsletter!</Form.Label>
+          {/* <br/> */}
+          <Form.Control id="emailInput" onChange={handleChange} type="text" placeholder="Enter email address" />
+          <Button id="emailButton" variant="dark" type="submit">Sign Up</Button>
+      </Form>
+
+      {/* <form id="emailSignUp" onSubmit={emailSignUp}>
         <label>Sign up for our newsletter!</label>
-        <input onChange={handleChange} type="text" default="Enter Email Address"></input>
-        <button type="submit">Sign Up</button>
-      </form>
+        <br />
+        <input id="emailInput" onChange={handleChange} type="text" default="Enter Email Address"></input>
+        <button id="emailButton" type="submit">Sign Up</button>
+      </form> */}
     </>
   )
 }

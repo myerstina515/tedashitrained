@@ -1,0 +1,17 @@
+#parent{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+#contacts{
+  width: 30vm;
+  height: 30vm;
+  border: 1px solid black;
+}
+#longText{
+  width: 30vm;
+  overflow:visible
+}
+#displayContacts{
+  margin: 20px;
+}
