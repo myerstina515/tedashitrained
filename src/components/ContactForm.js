@@ -13,7 +13,7 @@ const ContactForm = (props) => {
   //       "emailAddress": "myers.tina515@gmail.com",
   //       "phoneNumber": 4259618468,
   //       "trainingType": "group training",
-  //       "injury": false,
+  //       "injury": "false",
   //       "goals": "weight loss",
   //       "message": "what are your prices?",
   //       "contacted": "false"
@@ -37,7 +37,7 @@ const ContactForm = (props) => {
       injury: item.injury,
       goals: item.goals,
       message: item.message,
-      contacted: false
+      contacted: "no"
     })
       .then(results => {
         console.log('inside the .then ', results);
@@ -68,7 +68,7 @@ const ContactForm = (props) => {
           </Form.Group>
           <Form.Group>
             <Form.Label>Phone Number</Form.Label>
-            <Form.Control onChange={handleChange} type="number" name="phoneNumber"></Form.Control>
+            <Form.Control onChange={handleChange} type="text" name="phoneNumber"></Form.Control>
           </Form.Group>
           <Form.Group className="mb-3" onChange={handleChange}>
             <Form.Label>Training Type (select one)</Form.Label>
@@ -132,7 +132,7 @@ const ContactForm = (props) => {
             <Form.Label>Message</Form.Label>
             <Form.Control onChange={handleChange} as="textarea" rows={5} name="message" />
           </Form.Group>
-          <Button variant="primary" type="submit">Submit Inquiry</Button>
+          <Button id="emailButton" variant="dark" type="submit">Submit Inquiry</Button>
         </Form>
       </div>
     </>
