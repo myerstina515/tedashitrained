@@ -1,17 +1,51 @@
 #parent{
   display: flex;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 3vw;
 }
 #contacts{
-  width: 30vm;
+  width: 20vm;
   height: 30vm;
   border: 1px solid black;
 }
 #longText{
-  width: 30vm;
+  width: 20vm;
   overflow:visible
 }
 #displayContacts{
-  margin: 20px;
+  margin: 3vw;
+}
+#displayContacts:hover, #toggleButton:hover{
+  background-color: darkred;
+  color: white;
+}
+#text, #longText, #textDanger, #textSuccess{
+  margin: 0;
+}
+h1{
+  margin-left: 3vw;
+}
+#textDanger{
+  color: darkred;
+}
+#textSuccess{
+  color: darkgreen;
+}
+#toggleButton{
+  margin-top: 3vw;
+}
+#deleteX{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+}
+#deleteX:hover{
+  background-color: red;
+  border-radius: 3px;
+  color: black;
+}
+#modal{
+  margin-top: 20%;
+
 }

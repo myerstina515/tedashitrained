@@ -25,7 +25,7 @@ const Cards = () => {
                     <Typography className="question" color="textSecondary" gutterBottom>
                       Insert text here
                   </Typography>
-                    <Button></Button>
+                    <Button>click</Button>
                   </CardContent>
                 </Card>
               </Grid>
@@ -44,7 +44,7 @@ const Cards = () => {
                     <Typography className="question" color="textSecondary" gutterBottom>
                       Insert text here
                   </Typography>
-                    <Button></Button>
+                    <Button>click</Button>
                   </CardContent>
                 </Card>
               </Grid>
@@ -63,7 +63,7 @@ const Cards = () => {
                     <Typography className="question" color="textSecondary" gutterBottom>
                       Insert text here
                   </Typography>
-                    <Button></Button>
+                    <Button>click</Button>
                   </CardContent>
                 </Card>
               </Grid>

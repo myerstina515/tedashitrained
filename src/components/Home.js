@@ -16,7 +16,8 @@ const Home = () => {
     e.preventDefault();
     console.log('inside emailSignUp', emailAddress)
     const email = {
-      name: emailAddress
+      name: emailAddress,
+      contacted: "no"
     }
     console.log('this is the object: ', email)
     await axios.post('https://tt-api-server.herokuapp.com/client', email)
