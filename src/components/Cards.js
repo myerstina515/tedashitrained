@@ -25,7 +25,7 @@ const Cards = () => {
                     <Typography className="question" color="textSecondary" gutterBottom>
                       Insert text here
                   </Typography>
-                    <Button></Button>
+                    <Button>click</Button>
                   </CardContent>
                 </Card>
               </Grid>
@@ -44,7 +44,7 @@ const Cards = () => {
                     <Typography className="question" color="textSecondary" gutterBottom>
                       Insert text here
                   </Typography>
-                    <Button></Button>
+                    <Button>click</Button>
                   </CardContent>
                 </Card>
               </Grid>
@@ -63,14 +63,14 @@ const Cards = () => {
                     <Typography className="question" color="textSecondary" gutterBottom>
                       Insert text here
                   </Typography>
-                    <Button></Button>
+                    <Button>click</Button>
                   </CardContent>
                 </Card>
               </Grid>
             </div>
           </div>
         </div>
-        <div class="flip-card">
+        {/* <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <img alt="card content" src={Weights} />
@@ -88,7 +88,7 @@ const Cards = () => {
               </Grid>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   )

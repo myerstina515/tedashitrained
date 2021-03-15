@@ -1,21 +1,44 @@
 @import "~bootstrap/scss/bootstrap";
 
-#navBarRight{
-  margin: 0 20px 0 auto;
-}
-#item{
-  margin-left: 40px;
-  font-size: 20px;
-}
+// #navBarRight{
+//   margin: 0 20px 0 auto;
+// }
+// #item{
+//   margin-left: 40px;
+//   font-size: 20px;
+// }
 #heading{
   font-size: 25px;
 }
 #carouselImages{
-  height: 500px;
+  height: 600px;
 }
 #header{
   height: 100%;
   top: 0;
   position: sticky;
   z-index: 9999;
+}
+#videoSection{
+  margin: 0 20px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  p{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+  }
+  iframe{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+#images{
+  height: 65vh;
+}
+#carousel{
+  background-color: lightgrey;
+}
+a{
+  color: blue;
 }

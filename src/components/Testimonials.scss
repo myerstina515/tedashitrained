@@ -8,32 +8,31 @@
   margin-right: 25%;
 }
 .container{
-  width: 1100px;
+  width: 80vw;
   height: 500px;
-  // margin-top: 30px;
-  margin-left: 12.5%;
-  margin-right: 12.5%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-columns: 50% 50%;
   overflow: scroll;
-  border: 3px inset rgba(201, 201, 201, 0.851);
+  // border: 8px inset rgba(201, 201, 201, 0.851);
   padding-bottom: 20px;
 }
 .container2{
-  display: grid;
-  grid-template-columns: 33% 34% 33%;
-
-  
+  display: flex;
+  flex-wrap: wrap;
+  // grid-template-columns: 33% 34% 33%;
 }
-#instructions{
-  text-align: center;
-  margin-top: 20px;
-}
+// #instructions{
+//   text-align: center;
+//   margin-top: 20px;
+// }
 .reviews{
-  margin-top: 20px;
-  // margin-bottom: 50px;
-  width: 500px;
-  height: 200px;
+  justify-content: center;
+  margin: 20px auto 0 auto;
+  // width: 500px;
+  // height: 200px;
   border: none;
   overflow: scroll;
 }
@@ -41,8 +40,3 @@
   position: relative;
   float: right;
 }
-// .yelp-review{
-//   width: 75%;
-//   height: 200px;
-//   border: 3px inset rgba(201, 201, 201, 0.851);
-// }

@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Tedashi Trained
+
+## Created by: Tina Myers
+
+> heroku backend [here](https://tt-api-server.herokuapp.com/)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
