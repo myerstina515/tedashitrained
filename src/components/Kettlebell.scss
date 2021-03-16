@@ -1,12 +1,14 @@
 #parent{
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
   margin: 3vw;
 }
 #contacts{
-  width: 20vm;
+  width: 350px;
   height: 30vm;
   border: 1px solid black;
+  margin: 1.5vw;
 }
 #longText{
   width: 20vm;
