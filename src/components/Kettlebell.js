@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import useAjaxCalls from './hooks/ajax';
-import { Card, Button, CardColumns, Modal } from 'react-bootstrap';
+import { Card, Button, CardGroup, Modal } from 'react-bootstrap';
 import './Kettlebell.scss';
 
 const Kettlebell = () => {
@@ -9,9 +9,13 @@ const Kettlebell = () => {
   const [URL] = useAjaxCalls();
   const [show, setShow] = useState(false);
   // const [contacted, setContacted] = useState([])
+  const [deleteName, setDeleteName] = useState({});
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = (contacts) => {
+    setShow(true);
+    setDeleteName(contacts);
+  }
 
   const getContacts = async () => {
     let contactsFromDB = await axios.get(URL)
@@ -19,8 +23,9 @@ const Kettlebell = () => {
         console.log('response', response.data);
         return response.data;
       })
-    let sortedContacts = contactsFromDB.sort()
-    setContacts(sortedContacts);
+    let sortedContacts = contactsFromDB.sort((a, b) => 
+    (a.name > b.name) ? 1 : -1);
+    await setContacts(sortedContacts);
   }
   const contactClient = async (contacts) => {
     console.log(contacts._id);
@@ -78,7 +83,9 @@ const Kettlebell = () => {
         console.log('response', response.data);
         return response.data;
       })
-    setContacts(contactsFromDB);
+    let sortedContacts = contactsFromDB.sort((a, b) => 
+      (a.name > b.name) ? 1 : -1);
+    await setContacts(sortedContacts);
   }
 
   // onClick={() => deleteContact(contacts)}
@@ -89,75 +96,84 @@ const Kettlebell = () => {
       <h1>Admin page</h1>
       <Button variant="dark" id="displayContacts" onClick={getContacts}>Display Contacts</Button>
       <div id="parent">
-        <CardColumns>
-          {/* {contacts.contacted !== "yes" */}
-          {/* ? */}
+        <CardGroup>
           {contacts.map((contacts, idx) => (
             <div key={idx}>
-              <Card id="contacts">
-                <Card.Body>
-                  <button onClick={() => deleteContact(contacts)} id="deleteX" type="button" class="close" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <Card.Title>{contacts.name}</Card.Title>
-                  <Card.Text id="text">ID: {contacts._id}</Card.Text>
-                  <Card.Text id="text">Email: {contacts.emailAddress}</Card.Text>
-                  <Card.Text id="text">Phone: {contacts.phoneNumber}</Card.Text>
-                  <Card.Text id="text">Type: {contacts.trainingType}</Card.Text>
-                  {contacts.injury === "true"
-                    ? <Card.Text id="textDanger">Injury: {contacts.injury}</Card.Text>
-                    : <Card.Text id="text">Injury: {contacts.injury}</Card.Text>}
-                  <Card.Text id="longText">Goals: {contacts.goals}</Card.Text>
-                  <Card.Text id="longText">Message: {contacts.message}</Card.Text>
-                  {contacts.contacted === "no" ?
-                    <Card.Text id="textDanger">Contacted: {contacts.contacted}</Card.Text>
-                    : <Card.Text id="textSuccess">Contacted: {contacts.contacted}</Card.Text>}
-                  <Button variant="dark" id="toggleButton" onClick={() => contactClient(contacts)}>Toggle Contacted</Button>
-                
-                {/* <Modal id="modal" show={show} onHide={handleClose}>
-                  <Modal.Header closeButton>
-                    <Modal.Title>Delete</Modal.Title>
-                  </Modal.Header>
-                  <Modal.Body>
-                    Are you sure you want to delete {contacts.name}?
-                    </Modal.Body>
-                  <Modal.Footer>
-                    <Button id="modalButton" variant="secondary" onClick={handleClose}>Close</Button>
-                    <Button id="modalButton" variant="primary" onClick={() => deleteContact(contacts)}>Delete</Button>
-                  </Modal.Footer>
-                </Modal> */}
-                </Card.Body>
-              </Card>
+              {contacts.contacted === "no"
+                ?
+                <Card id="contacts">
+                  <Card.Body>
+                    <button onClick={() => handleShow(contacts)} id="deleteX" type="button" class="close" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <Card.Title>{contacts.name}</Card.Title>
+                    <Card.Text id="text">ID: {contacts._id}</Card.Text>
+                    <Card.Text id="text">Email: {contacts.emailAddress}</Card.Text>
+                    <Card.Text id="text">Phone: {contacts.phoneNumber}</Card.Text>
+                    <Card.Text id="text">Type: {contacts.trainingType}</Card.Text>
+                    {contacts.injury === "true"
+                      ? <Card.Text id="textDanger">Injury: {contacts.injury}</Card.Text>
+                      : <Card.Text id="text">Injury: {contacts.injury}</Card.Text>}
+                    <Card.Text id="longText">Goals: {contacts.goals}</Card.Text>
+                    <Card.Text id="longText">Message: {contacts.message}</Card.Text>
+                    {contacts.contacted === "no" ?
+                      <Card.Text id="textDanger">Contacted: {contacts.contacted}</Card.Text>
+                      : <Card.Text id="textSuccess">Contacted: {contacts.contacted}</Card.Text>}
+                    <Button variant="dark" id="toggleButton" onClick={() => contactClient(contacts)}>Toggle Contacted</Button>
+
+                  </Card.Body>
+                </Card>
+                :
+                <div></div>
+              }
             </div>
           ))}
-          {/* // :
-            // (contacts.map((contacts, idx) => (
-            //   <div key={idx}>
-            //     <Card id="contacts">
-            //       <Card.Body>
-            //         <Card.Title>{contacts.name}</Card.Title>
-            //         <Card.Text id="text">ID: {contacts._id}</Card.Text>
-            //         <Card.Text id="text">Email: {contacts.emailAddress}</Card.Text>
-            //         <Card.Text id="text">Phone: {contacts.phoneNumber}</Card.Text>
-            //         <Card.Text id="text">Type: {contacts.trainingType}</Card.Text>
-            //         {contacts.injury === "true" */}
-          {/* //           ? <Card.Text id="textDanger">Injury: {contacts.injury}</Card.Text>
-            //           : <Card.Text id="text">Injury: {contacts.injury}</Card.Text>}
-            //         <Card.Text id="longText">Goals: {contacts.goals}</Card.Text>
-            //         <Card.Text id="longText">Message: {contacts.message}</Card.Text>
-            //         {contacts.contacted === "yes" */}
-          {/* //           ? 
-            //           <Card.Text id="textSuccess">Contacted {contacts.contacted}</Card.Text>
-            //           : <div></div>}
-            //         <Button variant="dark" id="toggleButton" onClick={() => contactClient(contacts)}>Toggle Contacted</Button>
+          {contacts.map((contacts, idx) => (
+            <div key={idx}>
+              {contacts.contacted === "yes"
+                ?
+                <Card id="contacts">
+                  <Card.Body>
+                    <button onClick={() => handleShow(contacts)} id="deleteX" type="button" class="close" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <Card.Title>{contacts.name}</Card.Title>
+                    <Card.Text id="text">ID: {contacts._id}</Card.Text>
+                    <Card.Text id="text">Email: {contacts.emailAddress}</Card.Text>
+                    <Card.Text id="text">Phone: {contacts.phoneNumber}</Card.Text>
+                    <Card.Text id="text">Type: {contacts.trainingType}</Card.Text>
+                    {contacts.injury === "true"
+                      ? <Card.Text id="textDanger">Injury: {contacts.injury}</Card.Text>
+                      : <Card.Text id="text">Injury: {contacts.injury}</Card.Text>}
+                    <Card.Text id="longText">Goals: {contacts.goals}</Card.Text>
+                    <Card.Text id="longText">Message: {contacts.message}</Card.Text>
+                    {contacts.contacted === "no" ?
+                      <Card.Text id="textDanger">Contacted: {contacts.contacted}</Card.Text>
+                      : <Card.Text id="textSuccess">Contacted: {contacts.contacted}</Card.Text>}
+                    <Button variant="dark" id="toggleButton" onClick={() => contactClient(contacts)}>Toggle Contacted</Button>
 
-            //       </Card.Body>
-            //     </Card>
-            //   </div> */}
-          {/* // )))
+                  </Card.Body>
+                </Card>
+                :
+                <div></div>
+              }
+            </div>
+          ))}
 
-          // } */}
-        </CardColumns>
+          <Modal id="modal" show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Delete</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              Are you sure you want to delete {deleteName.name}?
+                    </Modal.Body>
+            <Modal.Footer>
+              <Button id="modalButton" variant="secondary" onClick={handleClose}>Close</Button>
+              <Button id="modalButton" variant="primary" onClick={() => deleteContact(deleteName)}>Delete</Button>
+            </Modal.Footer>
+          </Modal>
+
+        </CardGroup>
       </div>
     </>
   )
