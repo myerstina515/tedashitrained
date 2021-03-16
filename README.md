@@ -3,6 +3,7 @@
 ## Created by: Tina Myers
 
 > heroku backend [here](https://tt-api-server.herokuapp.com/)
+> heroku front end [here](https://tedashi-trained.herokuapp.com/)
 
 ## Getting Started with Create React App
 
