@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/tedashitrained/static/css/main.b0235916.chunk.css",
+    "main.js": "/tedashitrained/static/js/main.51297af0.chunk.js",
+    "main.js.map": "/tedashitrained/static/js/main.51297af0.chunk.js.map",
+    "runtime-main.js": "/tedashitrained/static/js/runtime-main.626d24d6.js",
+    "runtime-main.js.map": "/tedashitrained/static/js/runtime-main.626d24d6.js.map",
+    "static/js/2.5f6010e2.chunk.js": "/tedashitrained/static/js/2.5f6010e2.chunk.js",
+    "static/js/2.5f6010e2.chunk.js.map": "/tedashitrained/static/js/2.5f6010e2.chunk.js.map",
+    "static/js/3.6eff0fc6.chunk.js": "/tedashitrained/static/js/3.6eff0fc6.chunk.js",
+    "static/js/3.6eff0fc6.chunk.js.map": "/tedashitrained/static/js/3.6eff0fc6.chunk.js.map",
+    "index.html": "/tedashitrained/index.html",
+    "static/css/main.b0235916.chunk.css.map": "/tedashitrained/static/css/main.b0235916.chunk.css.map",
+    "static/js/2.5f6010e2.chunk.js.LICENSE.txt": "/tedashitrained/static/js/2.5f6010e2.chunk.js.LICENSE.txt",
+    "static/media/TedashiAndAshley.f0c20ef5.JPG": "/tedashitrained/static/media/TedashiAndAshley.f0c20ef5.JPG",
+    "static/media/TedashiCoverPage.d00ad4c3.jpg": "/tedashitrained/static/media/TedashiCoverPage.d00ad4c3.jpg",
+    "static/media/TedashiGroupTraining.ce9534e6.JPG": "/tedashitrained/static/media/TedashiGroupTraining.ce9534e6.JPG",
+    "static/media/TedashiProfilePic.20d9c1a3.jpg": "/tedashitrained/static/media/TedashiProfilePic.20d9c1a3.jpg",
+    "static/media/weightsServices.200e930c.jpg": "/tedashitrained/static/media/weightsServices.200e930c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.626d24d6.js",
+    "static/js/2.5f6010e2.chunk.js",
+    "static/css/main.b0235916.chunk.css",
+    "static/js/main.51297af0.chunk.js"
+  ]
+}
