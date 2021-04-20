@@ -1,10 +1,12 @@
 import React from 'react';
+import './Blog.scss';
 
 const Blog = () => {
   return(
-    <>
-      <h3>Blog in progress</h3>
-    </>
+    // TODO: fix blog page height before deployment
+    <div id="blog">
+      <h4>Coming Soon!</h4>
+    </div>
   )
 }
 

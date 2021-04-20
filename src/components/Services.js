@@ -1,7 +1,8 @@
 import React from 'react';
 import './Services.scss';
-import TedashiAndAshley from '../assets/TedashiAndAshley.JPG';
-import TedashiGroupTraining from '../assets/TedashiGroupTraining.JPG';
+import TedashiAndAshley from '../assets/TedashiAndAshleyResized.jpg';
+import TedashiGroupTraining from '../assets/TedashiGroupTraining2.jpg';
+// import '../App.css';
 
 const Services = () => {
   return (

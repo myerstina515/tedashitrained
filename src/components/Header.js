@@ -1,10 +1,12 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import Logo from '../assets/LogoTT.jpg'
 
 const Header = () => {
   return (
     <>
       <Navbar id="header" bg="dark" variant="dark">
+        <img id="logo" alt="Tedashi Trained Logo Kettlebell" src={Logo}></img>
         <Navbar.Brand href="/" id="heading">Tedashi Trained</Navbar.Brand>
         <Nav className="justify-content-end" id="navBarRight">
           {/* <Nav.Item>
