@@ -4,6 +4,12 @@
   margin: 3vw;
   border: 1px black solid;
   padding: 2vw;
+  // #displayImages{
+  //   height: 40%;
+  // }
+  #textDiv{
+    margin-left: 5px;
+  }
 }
 #containerRight{
   display: grid;
@@ -11,10 +17,16 @@
   margin: 3vw;
   border: 1px black solid;
   padding: 2vw;
+  #displayImages{
+    margin-left: 15px;
+  }
 }
 #displayImages{
-  width: 25vw;
+  width: 100%;
+  max-height: 250px; 
+  max-width: 250px;
 }
 #rightDiv{
   padding-left: 10px;
 }
+
