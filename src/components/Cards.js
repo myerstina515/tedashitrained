@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Weights from '../assets/weightsServices.jpg';
+import Stephanie from '../assets/StephanieMc.jpg';
 import './Cards.scss';
 
 
@@ -16,7 +17,7 @@ const Cards = () => {
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img alt="card content" src={Weights} />
+              <img alt="card content" src={Stephanie} />
             </div>
             <div class="flip-card-back">
               <Grid item xs={12}>
