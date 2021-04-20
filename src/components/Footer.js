@@ -5,6 +5,7 @@ import {
   faFacebook,
   faInstagram
 } from "@fortawesome/free-brands-svg-icons";
+import Logo from '../assets/LogoTT.jpg';
 
 
 function Footer() {
@@ -12,8 +13,10 @@ function Footer() {
     <div className="footer">
       <footer>
         <hr />
-        <p id="footer">
-          Tedashi Trained &copy; 2021
+        
+          
+        <p id="footer"><img id="logo2" src={Logo} alt="Tedashi Trained Kettlebell Logo (small)"/>Tedashi Trained &copy; 2021
+        
         <br />
           <a href="mailto:tedashitrained@gmail.com">tedashitrained@gmail.com</a>
         </p>

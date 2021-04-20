@@ -7,18 +7,25 @@
     width: 300px;
   }
   #images{
-    height: 40vh;
+    height: 30vh;
   }
   #carouselImages{
-    height: 500px;
+    height: 30vh;
+  }
+  #caption{
+    height: 5vh;
+    color: white;
+    font-size: 1.5vh;
+    margin-bottom: 1em;
+    padding-bottom: 0;
+  }
+  #h3{
+    font-size: 2vh;
   }
   .container{
     width: 375px;
     display: block;
   }
-  /* .reviews{
-    width: 280px; 
-  }*/
   #modalButton{
     font-size: 12px;
     width: 100px;
@@ -31,11 +38,40 @@
     margin-right: auto;
     font-size: 3vw;
   }
+  /* for the Services.js page */
+  #containerLeft, #containerRight{
+    display:flex;
+    flex-wrap: wrap;
+    margin: 3vw;
+    border: 1px black solid;
+    padding: 2vw;
+  }
+  #displayImages{
+    width: 40%;
+    margin: 10px;
+  }
+  #rightDiv{
+    padding-left: 0;
+  }
 }
-@media(max-width: 1024px){
+@media(min-width: 540px) and ( max-width: 1065px){
   .container{
     width: 375px;
     display: block;
+  }
+  #images{
+    height: 50vh;
+  }
+  #carouselImages{
+    height: 50vh;
+  }
+  #caption{
+    height: 5vh;
+    color: black;
+    font-size: 1.5vh;
+  }
+  #h3{
+    font-size: 2vh;
   }
 }
 @media(min-width: 1065px){
@@ -44,5 +80,19 @@
     /* display: block; */
     padding-left: 10vw;
     border: 8px inset rgba(201, 201, 201, 0.851);
+  }
+  /* #images{
+    height: 110vh;
+  }
+  #carouselImages{
+    height: 90vh;
+  } */
+  #caption{
+    height: 10vh;
+    color: black;
+    font-size: 1.5vh;
+  }
+  #h3{
+    font-size: 2vh;
   }
 }
