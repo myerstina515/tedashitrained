@@ -54,7 +54,7 @@
     padding-left: 0;
   }
 }
-@media(min-width: 540px) and ( max-width: 1065px){
+@media(min-width: 540px) and ( max-width: 1065px) and (orientation: portrait){
   .container{
     width: 375px;
     display: block;
@@ -72,6 +72,14 @@
   }
   #h3{
     font-size: 2vh;
+  }
+}
+@media(min-width: 540px) and ( max-width: 1065px) and (orientation: landscape){
+  #images{
+    height: 100vh;
+  }
+  #carouselImages{
+    height: 100vh;
   }
 }
 @media(min-width: 1065px){
