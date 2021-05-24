@@ -9,14 +9,23 @@ let initialState = {
   //       "injury": false,
   //       "goals": "weight loss",
   //       "message": "what are your prices?",
+  //       "contacted": false,
+  //       "routedFrom": "Google Search"
   //       "__v": 0
   //   },
 }
-export const getContacts = (contactsFromAPI) => {
-  console.log('CONTACT-REDUCER getContacts:', contactsFromAPI);
+export const populateContacts = payload => {
+  console.log('CONTACT-REDUCER getContacts:', payload);
   return {
     type: 'GET',
-    payload: contactsFromAPI
+    payload: payload
+  }
+}
+export const updateContacts = (name, contacted) => {
+  console.log('CONTACT-REDUCER updateContacts', {name}, {contacted});
+  return {
+    type: 'UPDATE',
+    payload: {name, contacted}
   }
 }
 
@@ -26,8 +35,12 @@ const contactReducer = (state=initialState, action) => {
     case 'GET':
       console.log('CONTACT-REDUCER contactsFromAPI', {payload});
       return {...state, contacts: payload};
-      default:
-        return state;
+    
+    case 'UPDATE':
+      console.log('CONTACT-REDUCER updateContacts', {payload});
+      return {payload}
+    default:
+      return state;
   }; 
 }
 

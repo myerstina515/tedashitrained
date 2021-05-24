@@ -37,7 +37,9 @@ const ContactForm = (props) => {
       injury: item.injury,
       goals: item.goals,
       message: item.message,
-      contacted: "no"
+      contacted: "no",
+      routedFrom: (item.routedFrom, item.referredBy),
+      newsletter: item.newsletter
     })
       .then(results => {
         console.log('inside the .then ', results);
@@ -65,6 +67,14 @@ const ContactForm = (props) => {
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Email address</Form.Label>
             <Form.Control onChange={handleChange} type="text" name="emailAddress"></Form.Control>
+            <Form.Group onChange={handleChange}>
+              <Form.Check
+                type="checkbox"
+                name="newsletter"
+                value="yes"
+                label="Would you like to recieve the weekly newsletter?"
+              />
+            </Form.Group>
           </Form.Group>
           <Form.Group>
             <Form.Label>Phone Number</Form.Label>
@@ -75,20 +85,20 @@ const ContactForm = (props) => {
             <Form.Check
               type="radio"
               name="trainingType"
-              value="1on1"
+              value="1 on 1"
               label="1 on 1 (in person)"
             />
             <Form.Check
               type="radio"
               name="trainingType"
               label="Group (in person)"
-              value="groupInPerson"
+              value="Group: In Person"
             />
             <Form.Check
               type="radio"
               name="trainingType"
               label="1 on 1 (online)"
-              value="1on1online"
+              value="1-on-1 (online)"
             />
             <Form.Check
               type="radio"
@@ -100,13 +110,13 @@ const ContactForm = (props) => {
               type="radio"
               name="trainingType"
               label="Online: programming only"
-              value="onlineProgramming"
+              value="Online Programming"
             />
             <Form.Check
               type="radio"
               name="trainingType"
               label="Nutrition coaching"
-              value="nutritionCoaching"
+              value="Nutrition Coaching"
             />
           </Form.Group>
           <Form.Group onChange={handleChange} name="injury">
@@ -124,6 +134,36 @@ const ContactForm = (props) => {
               value="false"
             />
           </Form.Group>
+          <Form.Group onChange={handleChange} name="routedFrom">
+            <Form.Label>How did you find me?</Form.Label>
+            <Form.Check
+              type="radio"
+              name="routedFrom"
+              label="Google Search"
+              value="true"
+            />
+            <Form.Check
+              type="radio"
+              name="routedFrom"
+              label="Social Media"
+              value="false"
+            />
+            <Form.Check
+              type="radio"
+              name="routedFrom"
+              label="Drive-by"
+              value="false"
+            />
+            <Form.Check
+              type="radio"
+              name="routedFrom"
+              label="Client Referral"
+              value="false"
+            />
+            <Form.Label>Specifically</Form.Label>
+            <Form.Control onChange={handleChange} as="textarea" rows={1} name="referredBy" />
+          </Form.Group>
+
           <Form.Group>
             <Form.Label>Goals</Form.Label>
             <Form.Control onChange={handleChange} as="textarea" rows={3} name="goals" />
