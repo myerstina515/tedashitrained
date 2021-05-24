@@ -3,12 +3,15 @@ import React, { useState } from 'react';
 import useAjaxCalls from './hooks/ajax';
 import { Card, Button, CardGroup, Modal } from 'react-bootstrap';
 import './Kettlebell.scss';
+import { connect } from 'react-redux';
+import { populateContacts } from './store/contact-reducer.js';
 
-const Kettlebell = () => {
+const mapDispatchToProps = { populateContacts }
+
+const Kettlebell = (props) => {
   const [contacts, setContacts] = useState([])
   const [URL] = useAjaxCalls();
   const [show, setShow] = useState(false);
-  // const [contacted, setContacted] = useState([])
   const [deleteName, setDeleteName] = useState({});
 
   const handleClose = () => setShow(false);
@@ -29,7 +32,6 @@ const Kettlebell = () => {
   }
   const contactClient = async (contacts) => {
     console.log(contacts._id);
-    // setContacts(contacts.contacted);
     if (contacts.contacted === "no") {
       await axios.put(`${URL}/${contacts._id}`, {
         contacted: "yes"
@@ -64,19 +66,6 @@ const Kettlebell = () => {
       .catch((err) => console.error(err))
   }
 
-  // const contactedClient = async (contacted) => {
-  //   await axios.put(`${URL}/${contacted._id}`, {
-  //     contacted: "no"
-  //   })
-  //     .then(response => {
-  //       console.log('response', response.data);
-  //       return response.data;
-  //     })
-  //   await (refresh())
-  //     .catch((err) => console.error(err))
-
-  // }
-
   const refresh = async () => {
     let contactsFromDB = await axios.get(URL)
       .then(response => {
@@ -88,8 +77,6 @@ const Kettlebell = () => {
     await setContacts(sortedContacts);
   }
 
-  // onClick={() => deleteContact(contacts)}
-  console.log('these are the contacts going into the return', contacts)
   return (
 
     <>
@@ -178,4 +165,8 @@ const Kettlebell = () => {
     </>
   )
 }
-export default Kettlebell;
+const mapStateToProps = state => ({
+  state,
+  allContacts: state.contactStore.contacts
+})
+export default connect(mapStateToProps, mapDispatchToProps)(Kettlebell);
