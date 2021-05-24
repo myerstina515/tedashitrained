@@ -9,7 +9,7 @@ const Services = () => {
   return (
     <>
       <div id="containerLeft">
-        <div><img id="displayImages" alt="one on one training" src={Ashley}>
+        <div id="display"><img id="displayImages" alt="one on one training" src={Ashley}>
         </img><img id="displayImages" class="second" alt="Nathania pushing sled" src={Nathania}></img></div>
         <div id="textDiv">
           <h2>In Person: One on One/Couples Training</h2>
@@ -47,7 +47,7 @@ const Services = () => {
         <div id="rightDiv"><img id="displayImages" alt="virtual/online training" src={TedashiGroupTraining}></img></div>
       </div>
       <div id="containerLeft">
-        <div><img id="displayImages" alt="one on one training" src={TedashiGroupTraining}>
+        <div id="display"><img id="displayImages" alt="one on one training" src={TedashiGroupTraining}>
         </img></div>
         <div id="textDiv">
           <h2>Training Club (Group Training) </h2>

@@ -96,8 +96,10 @@ const Kettlebell = (props) => {
                     <Card.Title>{contacts.name}</Card.Title>
                     <Card.Text id="text">ID: {contacts._id}</Card.Text>
                     <Card.Text id="text">Email: {contacts.emailAddress}</Card.Text>
+                    <Card.Text id="text">Newsletter: {contacts.newsletter}</Card.Text>
                     <Card.Text id="text">Phone: {contacts.phoneNumber}</Card.Text>
                     <Card.Text id="text">Type: {contacts.trainingType}</Card.Text>
+                    <Card.Text id="text">Routed: {contacts.routedFrom}</Card.Text>
                     {contacts.injury === "true"
                       ? <Card.Text id="textDanger">Injury: {contacts.injury}</Card.Text>
                       : <Card.Text id="text">Injury: {contacts.injury}</Card.Text>}
@@ -127,8 +129,10 @@ const Kettlebell = (props) => {
                     <Card.Title>{contacts.name}</Card.Title>
                     <Card.Text id="text">ID: {contacts._id}</Card.Text>
                     <Card.Text id="text">Email: {contacts.emailAddress}</Card.Text>
+                    <Card.Text id="text">Newsletter: {contacts.newsletter}</Card.Text>
                     <Card.Text id="text">Phone: {contacts.phoneNumber}</Card.Text>
                     <Card.Text id="text">Type: {contacts.trainingType}</Card.Text>
+                    <Card.Text id="text">Routed: {contacts.routedFrom}</Card.Text>
                     {contacts.injury === "true"
                       ? <Card.Text id="textDanger">Injury: {contacts.injury}</Card.Text>
                       : <Card.Text id="text">Injury: {contacts.injury}</Card.Text>}
