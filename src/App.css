@@ -84,17 +84,9 @@
 }
 @media(min-width: 1065px){
   .container{
-    /* width: 375px; */
-    /* display: block; */
     padding-left: 10vw;
     border: 8px inset rgba(201, 201, 201, 0.851);
   }
-  /* #images{
-    height: 110vh;
-  }
-  #carouselImages{
-    height: 90vh;
-  } */
   #caption{
     height: 10vh;
     color: black;
@@ -102,5 +94,21 @@
   }
   #h3{
     font-size: 2vh;
+  }
+  #containerLeft{
+    display: grid;
+    grid-template-columns: 25% 73%;
+  }
+  #containerRight{
+    display: grid;
+    grid-template-columns: 73% 25%;
+  }
+  #rightDiv, #display{
+    display: grid;
+    grid-template-rows: 45% 50%;
+  }
+  #displayImages{
+    margin-left: auto;
+    margin-right: auto;
   }
 }
