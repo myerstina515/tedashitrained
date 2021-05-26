@@ -4,7 +4,7 @@
 .flip-card {
   // flex-wrap: wrap;
   margin: 20px auto 20px auto;
-  background-color: transparent;
+  // background-color: transparent;
   width: 425px;
   height: 300px;
   border: none;
@@ -31,7 +31,7 @@
   backface-visibility: hidden;
 }
 .flip-card-front {
-  background-color: none;
+  // background-color: none;
   color: black;
   border-left-color:#eee;
   border-radius:2px;
@@ -63,4 +63,7 @@
 }
 #results{
   text-align: center;
+}
+#stephanie{
+  background-color: black;
 }
