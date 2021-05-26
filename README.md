@@ -1,6 +1,6 @@
 # Tedashi Trained
 
-Tedashi Trained is a business website for the personal training company, Tedashi Trained, LLC, and has a corresponding back-end API [here](https://tt-api-server.herokuapp.com/) with the GitHub codebase [here]
+Tedashi Trained is a business website for the personal training company, Tedashi Trained, LLC, and has a corresponding back-end API [here](https://tt-api-server.herokuapp.com/) with the GitHub codebase [here](https://github.com/myerstina515/APIserver)
 The deployed front-end application lives [here](https://tedashi-trained.herokuapp.com/)
 
 ## Created by: Tina Myers
