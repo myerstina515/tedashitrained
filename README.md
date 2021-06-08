@@ -14,7 +14,7 @@ The deployed front-end application lives [here](https://tedashi-trained.herokuap
 
 [LinkedIn](https://www.linkedin.com/in/tinalmyers/)💻
 
-[GitHub](https://github.com/myerstina515/tedashitrained)
+[GitHub](https://github.com/myerstina515)
 
 #### License
 
