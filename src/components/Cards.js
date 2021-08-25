@@ -6,6 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Weights from '../assets/weightsServices.jpg';
 import Stephanie from '../assets/stephanie.PNG';
+import Nora from '../assets/Nora.PNG';
 import './Cards.scss';
 
 
@@ -26,7 +27,7 @@ const Cards = () => {
                     <Typography id="question" color="textSecondary" gutterBottom>
                       Group Training - Providing a safe place to workout with others that just want to better themselves in a fun, interactive environment where no matter what level you are at, there will be progressions or modifications available to keep you safe!
                     </Typography>
-                    <Button id="buttons">Services - Group</Button>
+                    <button id="buttons">Services - Group</button>
                   </CardContent>
                 </Card>
               </Grid>
@@ -35,14 +36,14 @@ const Cards = () => {
         </div>
         <div class="flip-card">
           <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img alt="card content" src={Weights} />
+            <div id="stephanie" class="flip-card-front">
+              <img id="stephanie" alt="card content" src={Nora} />
             </div>
             <div class="flip-card-back">
               <Grid item xs={12}>
                 <Card className="root" variant="outlined">
                   <CardContent class="backContent">
-                    <Typography className="question" color="textSecondary" gutterBottom>
+                    <Typography id="question" color="textSecondary" gutterBottom>
                       Insert text here
                     </Typography>
                     <Button>click</Button>
@@ -61,7 +62,7 @@ const Cards = () => {
               <Grid item xs={12}>
                 <Card className="root" variant="outlined">
                   <CardContent class="backContent">
-                    <Typography className="question" color="textSecondary" gutterBottom>
+                    <Typography id="question" color="textSecondary" gutterBottom>
                       Insert text here
                     </Typography>
                     <Button>click</Button>
