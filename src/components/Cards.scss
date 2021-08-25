@@ -51,6 +51,7 @@
   }
 }
 .flip-card-back {
+  height: 300px;
   color: white;
   transform: rotateY(180deg);
 }
@@ -66,4 +67,12 @@
 }
 #stephanie{
   background-color: black;
+}
+#question{
+  width: 90%;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+  text-align: center;
 }
