@@ -23,9 +23,28 @@ const Cards = () => {
               <Grid item xs={12}>
                 <Card className="root" variant="outlined">
                   <CardContent class="backContent">
+                    <Typography id="question" color="textSecondary" gutterBottom>
+                      Group Training - Providing a safe place to workout with others that just want to better themselves in a fun, interactive environment where no matter what level you are at, there will be progressions or modifications available to keep you safe!
+                    </Typography>
+                    <Button id="buttons">Services - Group</Button>
+                  </CardContent>
+                </Card>
+              </Grid>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img alt="card content" src={Weights} />
+            </div>
+            <div class="flip-card-back">
+              <Grid item xs={12}>
+                <Card className="root" variant="outlined">
+                  <CardContent class="backContent">
                     <Typography className="question" color="textSecondary" gutterBottom>
                       Insert text here
-                  </Typography>
+                    </Typography>
                     <Button>click</Button>
                   </CardContent>
                 </Card>
@@ -44,26 +63,7 @@ const Cards = () => {
                   <CardContent class="backContent">
                     <Typography className="question" color="textSecondary" gutterBottom>
                       Insert text here
-                  </Typography>
-                    <Button>click</Button>
-                  </CardContent>
-                </Card>
-              </Grid>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img alt="card content" src={Weights} />
-            </div>
-            <div class="flip-card-back">
-              <Grid item xs={12}>
-                <Card className="root" variant="outlined">
-                  <CardContent class="backContent">
-                    <Typography className="question" color="textSecondary" gutterBottom>
-                      Insert text here
-                  </Typography>
+                    </Typography>
                     <Button>click</Button>
                   </CardContent>
                 </Card>

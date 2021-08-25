@@ -1,8 +1,8 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import Image2 from '../assets/NathaniaResized.jpg';
-import Image1 from '../assets/TedashiShield3.jpg';
-import Image3 from '../assets/TedashiChristinaPlank2.jpg';
+import Image2 from '../assets/NathaniaTesting2.jpg';
+import Image1 from '../assets/ShieldTesting3.jpg';
+import Image3 from '../assets/TandCTesting.jpg';
 
 const ImageCarousel = () => {
   return (
@@ -16,8 +16,8 @@ const ImageCarousel = () => {
               alt="First slide"
             />
             <Carousel.Caption id="caption">
-              <h3 id="h3">Tedashi Trained</h3>
-              <p id="p">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3 id="h3">Tedashi - NASM/NCSF Certified Personal Trainer</h3>
+              <p id="p">10+ Years of experience in fitness and health/wellness coaching</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item id="carouselImages" interval={5000}>
@@ -28,8 +28,8 @@ const ImageCarousel = () => {
               alt="Second slide"
             />
             <Carousel.Caption id="caption">
-              <h3 id="h3">Training</h3>
-              <p id="p">Individual, Group, and Partner training</p>
+              <h3 id="h3">Services - Personal Training, Online Coaching, Group Training</h3>
+              <p id="p">All truly personalized to get you the "Forever Body" that will last you a lifetime!</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item id="carouselImages" interval={5000}>
@@ -41,7 +41,7 @@ const ImageCarousel = () => {
             />
             <Carousel.Caption id="caption">
               <h3 id="h3">Goals</h3>
-              <p id="p">Plans to hit your personal goals</p>
+              <p id="p">Customized plans based off your goals, where you get help every step of the way!</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
