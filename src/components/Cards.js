@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent';
 // import Button from '@material-ui/core/Button';
 import Adi from '../assets/AdiOnline.PNG';
-import Weights from '../assets/weightsServices.jpg';
 import Stephanie from '../assets/stephanie.PNG';
 import Nora from '../assets/Nora.PNG';
 import './Cards.scss';
@@ -20,6 +19,7 @@ const Cards = () => {
           <div class="flip-card-inner">
             <div id="stephanie" class="flip-card-front">
               <img class="cardBackground" alt="Group Training" src={Stephanie} />
+              <p id="cardDesc">Group Training</p>
             </div>
             <div class="flip-card-back">
               <Grid item xs={12}>
@@ -39,6 +39,7 @@ const Cards = () => {
           <div class="flip-card-inner">
             <div id="stephanie" class="flip-card-front">
               <img class="cardBackground" alt="One on One Training" src={Nora} />
+              <p id="cardDesc">One on One Training</p>
             </div>
             <div class="flip-card-back">
               <Grid item xs={12}>
@@ -58,6 +59,7 @@ const Cards = () => {
           <div class="flip-card-inner">
             <div id="stephanie" class="flip-card-front">
               <img class="cardBackground" alt="Online Training" src={Adi} />
+              <p id="cardDesc">Online Training</p>
             </div>
             <div class="flip-card-back">
               <Grid item xs={12}>

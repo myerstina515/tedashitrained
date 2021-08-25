@@ -8,7 +8,7 @@
     /* height: 240px; */
   }
   .flip-card-front, .flip-card-back {
-    color: black;
+    background-color: black;
     border-left-color:#eee;
     border-radius:2px;
     border-right-color:#eee;
@@ -146,6 +146,14 @@
     max-height:100%;
     max-width:100%;
   }
+  #containerAboutMe{
+    display: grid;
+    grid-template-columns: 30% 65%;
+  }
+  #displayImagesAboutMe{
+    width: 70%;
+    margin: auto 15%;
+  }
 }
 @media(min-width: 540px) and ( max-width: 1065px) and (orientation: landscape){
   #images{
@@ -154,9 +162,6 @@
   #carouselImages{
     height: 100vh;
   }
-  /* #containerAboutMe{
-
-  } */
   #question{
     width: 75%;
     font-size: 1.1em;
@@ -185,6 +190,14 @@
     max-height:100%;
     max-width:100%;
   }
+  #containerAboutMe{
+    display: grid;
+    grid-template-columns: 30% 65%;
+  }
+  #displayImagesAboutMe{
+    width: 70%;
+    margin: auto 15%;
+  }
 }
 @media(min-width: 1065px){
   .container{
@@ -199,11 +212,13 @@
   #h3{
     font-size: 2vh;
   }
-
   #containerAboutMe{
-    font-size: 15px;
     display: grid;
     grid-template-columns: 30% 65%;
+  }
+  #displayImagesAboutMe{
+    width: 70%;
+    margin: auto 15%;
   }
   #question{
     width: 75%;
@@ -233,7 +248,6 @@
     max-height:100%;
     max-width:100%;
   }
-}
 
   #containerLeft{
     display: grid;
