@@ -5,6 +5,27 @@
   }  
   .flip-card{
     width: 300px;
+    /* height: 240px; */
+  }
+  .flip-card-front, .flip-card-back {
+    color: black;
+    border-left-color:#eee;
+    border-radius:2px;
+    border-right-color:#eee;
+    border-top-color:#ddd;
+    box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+    box-sizing:border-box;
+    border:solid 2px;
+    border-bottom-color:#ffe;
+    border-left-color:#eed;
+    border-right-color:#eed;
+    border-top-color:#ccb;
+  }
+  .flip-card-front img, .flip-card-back img{
+    border: none;
+    width: 100%;
+    max-height:100%;
+    max-width:100%;
   }
   #images{
     height: 30vh;
@@ -13,14 +34,19 @@
     height: 30vh;
   }
   #caption{
-    height: 5vh;
+    height: 7vh;
     color: white;
-    font-size: 1.5vh;
-    margin-bottom: 1em;
+    font-size: 1vh;
+    margin-bottom: 0.5em;
     padding-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.735);
+  }
+  #p{
+    background-color: rgba(0, 0, 0, 0.735);
   }
   #h3{
-    font-size: 2vh;
+    font-size: 1.4vh;
+    /* background-color: rgba(0, 0, 0, 0.735); */
   }
   .container{
     width: 375px;
@@ -38,6 +64,15 @@
     margin-right: auto;
     font-size: 3vw;
   }
+  #question{
+    width: 75%;
+    font-size: 1em;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    text-align: center;
+  }
   /* for the Services.js page */
   #containerLeft, #containerRight{
     display:flex;
@@ -53,6 +88,16 @@
   #rightDiv{
     padding-left: 0;
   }
+  /*About me page*/
+  #containerAboutMe{
+    display: grid;
+    grid-template-rows: 13% 87%;
+  }
+  #displayImagesAboutMe{
+    width: 50%;
+    margin: auto 25%;
+  }
+  
 }
 @media(min-width: 540px) and ( max-width: 1065px) and (orientation: portrait){
   .container{
@@ -68,10 +113,38 @@
   #caption{
     height: 5vh;
     color: black;
-    font-size: 1.5vh;
+    font-size: 1.1vh;
   }
   #h3{
-    font-size: 2vh;
+    font-size: 1.3vh;
+  }
+  #question{
+    width: 75%;
+    font-size: 1.1em;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    text-align: center;
+  }
+  .flip-card-front, .flip-card-back {
+    color: black;
+    border-left-color:#eee;
+    border-radius:2px;
+    border-right-color:#eee;
+    border-top-color:#ddd;
+    box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+    box-sizing:border-box;
+  }
+  .flip-card-front img, .flip-card-back img{
+    border:solid 2px;
+    border-bottom-color:#ffe;
+    border-left-color:#eed;
+    border-right-color:#eed;
+    border-top-color:#ccb;
+    width: 100%;
+    max-height:100%;
+    max-width:100%;
   }
 }
 @media(min-width: 540px) and ( max-width: 1065px) and (orientation: landscape){
@@ -80,6 +153,37 @@
   }
   #carouselImages{
     height: 100vh;
+  }
+  /* #containerAboutMe{
+
+  } */
+  #question{
+    width: 75%;
+    font-size: 1.1em;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    text-align: center;
+  }
+  .flip-card-front, .flip-card-back {
+    color: black;
+    border-left-color:#eee;
+    border-radius:2px;
+    border-right-color:#eee;
+    border-top-color:#ddd;
+    box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+    box-sizing:border-box;
+  }
+  .flip-card-front img, .flip-card-back img{
+    border:solid 2px;
+    border-bottom-color:#ffe;
+    border-left-color:#eed;
+    border-right-color:#eed;
+    border-top-color:#ccb;
+    width: 100%;
+    max-height:100%;
+    max-width:100%;
   }
 }
 @media(min-width: 1065px){
@@ -95,6 +199,42 @@
   #h3{
     font-size: 2vh;
   }
+
+  #containerAboutMe{
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: 30% 65%;
+  }
+  #question{
+    width: 75%;
+    font-size: 1.2em;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    text-align: center;
+  }
+  .flip-card-front, .flip-card-back {
+    color: black;
+    border-left-color:#eee;
+    border-radius:2px;
+    border-right-color:#eee;
+    border-top-color:#ddd;
+    box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+    box-sizing:border-box;
+  }
+  .flip-card-front img, .flip-card-back img{
+    border:solid 2px;
+    border-bottom-color:#ffe;
+    border-left-color:#eed;
+    border-right-color:#eed;
+    border-top-color:#ccb;
+    width: 100%;
+    max-height:100%;
+    max-width:100%;
+  }
+}
+
   #containerLeft{
     display: grid;
     grid-template-columns: 25% 73%;
@@ -112,3 +252,4 @@
     margin-right: auto;
   }
 }
+
