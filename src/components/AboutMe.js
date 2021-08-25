@@ -7,11 +7,11 @@ const AboutMe = () => {
     <div id="aboutMe">
       <h4
         id="headingAboutMe">My Journey to Personal Training</h4>
-      <div id="containerAboutMe">
+      <div id="containerAboutMe" class="topDiv">
         <div>
-          <img id="displayImages" alt="tedashi" src={TedashiPic} />
+          <img id="displayImagesAboutMe" alt="tedashi" src={TedashiPic} />
         </div>
-        <div>
+        <div class="bottomDiv">
           <p id="pTag">
             Growing up, I was always into sports. Soccer, BMX, Karate, Cross Country, Wrestling... I never thought about how the human body worked. To me, it just worked. My favorite sport that I ended up really having a passion for was wrestling. After graduating from Mountlake Terrace High School in 2005, I came back a few years later (2008) to coach with my old Head Coach, Kanoe Vierra. There was one day that we were having the team lift, I looked around and asked Kanoe why we were still having the team do the same routine that I did when I was in school. Him, being a Dean of Students and English teacher, didn't know any different than what he was taught in college, so that's what we were doing. He turned to me and told me that I could change anything if I had a better way of doing it.</p>
           {/* <br /> */}
