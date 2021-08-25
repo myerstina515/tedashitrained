@@ -17,6 +17,7 @@
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  border: none;
 }
 .flip-card:hover .flip-card-inner {
   transition: transform 2s;
@@ -30,7 +31,7 @@
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
-.flip-card-front {
+.flip-card-front, .flip-card-back {
   // background-color: none;
   color: black;
   border-left-color:#eee;
@@ -55,8 +56,29 @@
   color: white;
   transform: rotateY(180deg);
 }
-#backContent{
-  border: 5px inset rgb(151, 143, 50);
+.backContent{
+  position: relative;
+  height: 300px;
+  border: 5px inset rgb(255, 0, 0);
+  #buttons{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 0;
+    border: #292b2c 2px solid;
+    border-radius: 5px;
+  }
+}
+.backContent::before{
+  content: "";
+  position: absolute;
+  top: -5vh;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: url('../assets/LogoTT.jpg');
+  background-size: cover;
+  opacity: 10%;
 }
 #grid{
   margin: 10% 30% 10% 35%;
@@ -69,7 +91,8 @@
   background-color: black;
 }
 #question{
-  width: 90%;
+  width: 70%;
+  font-size: 1.2em;
   color: black;
   margin-left: auto;
   margin-right: auto;
