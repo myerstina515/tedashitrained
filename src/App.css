@@ -8,7 +8,9 @@
     /* height: 240px; */
   }
   .flip-card-front, .flip-card-back {
+
     background-color: black;
+
     border-left-color:#eee;
     border-radius:2px;
     border-right-color:#eee;
@@ -153,6 +155,7 @@
   #displayImagesAboutMe{
     width: 70%;
     margin: auto 15%;
+
   }
 }
 @media(min-width: 540px) and ( max-width: 1065px) and (orientation: landscape){
@@ -212,6 +215,7 @@
   #h3{
     font-size: 2vh;
   }
+
   #containerAboutMe{
     display: grid;
     grid-template-columns: 30% 65%;
@@ -220,6 +224,7 @@
     width: 70%;
     margin: auto 15%;
   }
+
   #question{
     width: 75%;
     font-size: 1.2em;
@@ -248,7 +253,6 @@
     max-height:100%;
     max-width:100%;
   }
-
   #containerLeft{
     display: grid;
     grid-template-columns: 25% 73%;
