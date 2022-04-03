@@ -11,7 +11,7 @@ const Services = () => {
       <div id="containerLeft">
         <div id="display"><img id="displayImages" alt="one on one training" src={Ashley}>
         </img><img id="displayImages" class="second" alt="Nathania pushing sled" src={Nathania}></img></div>
-        <div id="textDiv">
+        <div id="textDiv" class="left">
           <h2>In Person: One on One/Couples Training</h2>
           <p id="pTag">Train one-on-one, or with a spouse, friend or co-worker. With a custom designed fitness program for you that is designed to reach your fitness goals faster and safer than you would on your own. </p>
           <p id="pTag">You will be provided accountability and motivation that you need to stay on track, and your program will be frequently adjusted to make better progress and avoid plateaus. Modifications can be made to any exercise, if necessary, depending on varying fitness levels or presence of any pre-existing injuries.</p>
@@ -49,7 +49,7 @@ const Services = () => {
       <div id="containerLeft">
         <div id="display"><img id="displayImages" alt="one on one training" src={TedashiGroupTraining}>
         </img></div>
-        <div id="textDiv">
+        <div id="textDiv" class="left">
           <h2>Training Club (Group Training) </h2>
           <p id="pTag">Train in a group is an affordable way to have fun and still have semi-personal attention to your fitness journey. With custom designed workouts designed to push you, have fun, and safer than you would on your own. </p>
           <p id="pTag">You will be provided accountability and motivation that you need to stay on track and consistently adjust your program to avoid plateaus. Modifications can be made to any exercise depending on fitness level or any pre-existing injuries when necessary and having a trainer there allows you to keep it safe, fun, and challening. </p>
