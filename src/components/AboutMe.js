@@ -7,8 +7,8 @@ const AboutMe = () => {
     <div id="aboutMe">
       <h4
         id="headingAboutMe">My Journey to Personal Training</h4>
-      <div id="containerAboutMe" class="topDiv">
-        <div>
+      <div id="containerAboutMe" >
+        <div class="topDiv">
           <img id="displayImagesAboutMe" alt="tedashi" src={TedashiPic} />
         </div>
         <div class="bottomDiv">
