@@ -8,6 +8,7 @@ import axios from 'axios';
 
 const ContactForm = (props) => {
   // object model: {
+  //       "date": "mm/dd/yyyy"
   //       "_id": "603d4323db9abd502871c601",
   //       "name": "Tina Myers",
   //       "emailAddress": "myers.tina515@gmail.com",
@@ -24,14 +25,16 @@ const ContactForm = (props) => {
   const handleChange = (e) => {
     setState({ ...item, [e.target.name]: e.target.value })
     console.log('item in handlechange ', item)
+    console.log('what type', typeof(item.date))
   };
 
   const handleSubmit = async (e) => {
     console.log(URL)
     e.preventDefault();
     axios.post(URL, {
-      date: item.date,
+      
       name: item.name,
+      date: item.date,
       emailAddress: item.emailAddress,
       phoneNumber: item.phoneNumber,
       trainingType: item.trainingType,
@@ -45,7 +48,7 @@ const ContactForm = (props) => {
       .then(results => {
         console.log('inside the .then ', results);
         setList([...list, results.data]);
-        console.log('after set list', list);
+        console.log('after set list', results.data);
       })
       .catch((err) => {
         console.error(err)
@@ -61,13 +64,13 @@ const ContactForm = (props) => {
       <h2 id="contactUs">Contact Us</h2>
       <div id="bodyArea">
         <Form onSubmit={handleSubmit} id="contactUsForm">
-        <Form.Group controlId="formBasicEmail">
-            <Form.Label>Today's Date</Form.Label>
-            <Form.Control onChange={handleChange} name="date" type="date" required></Form.Control>
-          </Form.Group>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Name</Form.Label>
             <Form.Control onChange={handleChange} name="name" type="text"></Form.Control>
+          </Form.Group>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label>Today's Date</Form.Label>
+            <Form.Control onChange={handleChange} name="date" type="date" required></Form.Control>
           </Form.Group>
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Email address</Form.Label>

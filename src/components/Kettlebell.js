@@ -94,8 +94,8 @@ const Kettlebell = (props) => {
                       <span aria-hidden="true">&times;</span>
                     </button>
                     <Card.Title>{contacts.name}</Card.Title>
-                    <Card.Text id="text">Date Submitted: {contacts.date}</Card.Text>
                     <Card.Text id="text">ID: {contacts._id}</Card.Text>
+                    <Card.Text id="text">Date Submitted: {contacts.date}</Card.Text>
                     <Card.Text id="text">Email: {contacts.emailAddress}</Card.Text>
                     <Card.Text id="text">Newsletter: {contacts.newsletter}</Card.Text>
                     <Card.Text id="text">Phone: {contacts.phoneNumber}</Card.Text>
@@ -128,8 +128,8 @@ const Kettlebell = (props) => {
                       <span aria-hidden="true">&times;</span>
                     </button>
                     <Card.Title>{contacts.name}</Card.Title>
-                    <Card.Text id="text">Date Submitted: {contacts.date}</Card.Text>
                     <Card.Text id="text">ID: {contacts._id}</Card.Text>
+                    <Card.Text id="text">Date Submitted: {contacts.date}</Card.Text>
                     <Card.Text id="text">Email: {contacts.emailAddress}</Card.Text>
                     <Card.Text id="text">Newsletter: {contacts.newsletter}</Card.Text>
                     <Card.Text id="text">Phone: {contacts.phoneNumber}</Card.Text>
