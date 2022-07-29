@@ -63,7 +63,7 @@ const ContactForm = (props) => {
         <Form onSubmit={handleSubmit} id="contactUsForm">
         <Form.Group controlId="formBasicEmail">
             <Form.Label>Today's Date</Form.Label>
-            <Form.Control onChange={handleChange} name="date" type="date"></Form.Control>
+            <Form.Control onChange={handleChange} name="date" type="date" required></Form.Control>
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Name</Form.Label>
