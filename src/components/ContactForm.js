@@ -30,6 +30,7 @@ const ContactForm = (props) => {
     console.log(URL)
     e.preventDefault();
     axios.post(URL, {
+      date: item.date,
       name: item.name,
       emailAddress: item.emailAddress,
       phoneNumber: item.phoneNumber,
@@ -60,6 +61,10 @@ const ContactForm = (props) => {
       <h2 id="contactUs">Contact Us</h2>
       <div id="bodyArea">
         <Form onSubmit={handleSubmit} id="contactUsForm">
+        <Form.Group controlId="formBasicEmail">
+            <Form.Label>Today's Date</Form.Label>
+            <Form.Control onChange={handleChange} name="date" type="date"></Form.Control>
+          </Form.Group>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Name</Form.Label>
             <Form.Control onChange={handleChange} name="name" type="text"></Form.Control>
