@@ -24,12 +24,12 @@ const ContactForm = (props) => {
 
   const handleChange = (e) => {
     setState({ ...item, [e.target.name]: e.target.value })
-    console.log('item in handlechange ', item)
-    console.log('what type', typeof(item.date))
+    // console.log('item in handlechange ', item)
+    // console.log('what type', typeof(item.date))
   };
 
   const handleSubmit = async (e) => {
-    console.log(URL)
+    // console.log(URL)
     e.preventDefault();
     axios.post(URL, {
       
@@ -46,15 +46,15 @@ const ContactForm = (props) => {
       newsletter: item.newsletter
     })
       .then(results => {
-        console.log('inside the .then ', results);
+        // console.log('inside the .then ', results);
         setList([...list, results.data]);
-        console.log('after set list', results.data);
+        // console.log('after set list', results.data);
       })
       .catch((err) => {
         console.error(err)
       })
     e.target.reset();
-    console.log('this is the item in handlesubmit: ', item);
+    // console.log('this is the item in handlesubmit: ', item);
     // props.handleSubmit(item);
     setState({});
   };
