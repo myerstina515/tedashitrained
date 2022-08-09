@@ -31,13 +31,13 @@ const Kettlebell = (props) => {
     await setContacts(sortedContacts);
   }
   const contactClient = async (contacts) => {
-    console.log(contacts._id);
+    // console.log(contacts._id);
     if (contacts.contacted === "no") {
       await axios.put(`${URL}/${contacts._id}`, {
         contacted: "yes"
       })
         .then(response => {
-          console.log('response', response.data);
+          // console.log('response', response.data);
           return response.data;
         })
       await (refresh())
@@ -47,7 +47,7 @@ const Kettlebell = (props) => {
         contacted: "no"
       })
         .then(response => {
-          console.log('response', response.data);
+          // console.log('response', response.data);
           return response.data;
         })
       await (refresh())
@@ -56,10 +56,10 @@ const Kettlebell = (props) => {
   }
 
   const deleteContact = async (contacts) => {
-    console.log(contacts._id);
+    // console.log(contacts._id);
     await axios.delete(`${URL}/${contacts._id}`)
       .then(response => {
-        console.log('you have deleted: ', response.data)
+        // console.log('you have deleted: ', response.data)
       })
     await (handleClose());
     await (refresh())
@@ -69,7 +69,7 @@ const Kettlebell = (props) => {
   const refresh = async () => {
     let contactsFromDB = await axios.get(URL)
       .then(response => {
-        console.log('response', response.data);
+        // console.log('response', response.data);
         return response.data;
       })
     let sortedContacts = contactsFromDB.sort((a, b) => 
