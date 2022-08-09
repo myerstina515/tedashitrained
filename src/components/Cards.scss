@@ -30,6 +30,7 @@
   height: 300px;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  margin-bottom: 20px;
 }
 
 .flip-card-back {
@@ -41,14 +42,14 @@
   position: relative;
   height: 300px;
   border: 5px inset rgb(255, 0, 0);
-  #buttons{
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-bottom: 0;
-    border: #292b2c 2px solid;
-    border-radius: 5px;
-  }
+  // #buttons{
+  //   width: 50%;
+  //   margin-left: 25%;
+  //   margin-right: 25%;
+  //   margin-bottom: 0;
+  //   border: #292b2c 2px solid;
+  //   border-radius: 5px;
+  // }
 }
 .backContent::before{
   content: "";
@@ -70,5 +71,14 @@
 }
 #cardDesc{
   color: black;
+  // line-height: 15px;
+  border: black 1px solid;
+  padding: 5px 10px;
+  background-color: lightgrey;
+  // border-radius: 5px;
+  margin-top: 5px;
 }
+// .externalBorder{
+//   margin-bottom: 10px;
+// }
 

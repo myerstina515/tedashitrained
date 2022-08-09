@@ -7,23 +7,37 @@ import axios from 'axios';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import './Home.scss';
+// import Date from './Date.js';
 
 
 const Home = () => {
   const [emailAddress, setEmail] = useState('');
 
+  // const Date = () => {
+  //   let newDate = new Date()
+  //   let date = newDate.getDate();
+  //   let month = newDate.getMonth() + 1;
+  //   let year = newDate.getFullYear();
+  
+  //   return `${year}, ${month<10?`0${month}`:`${month}`}, ${date}`
+  // }
+
   const emailSignUp = async (e) => {
+    const todayDate = new Date();
     e.preventDefault();
-    console.log('inside emailSignUp', emailAddress)
+    // console.log('inside emailSignUp', emailAddress)
     const email = {
       name: emailAddress,
-      contacted: "no"
+      contacted: "no",
+      date: todayDate,
+      message: "signing up for newsletter from main page",
+      newsletter: "yes"
     }
-    console.log('this is the object: ', email)
+    // console.log('this is the object: ', email, todayDate)
     await axios.post('https://tt-api-server.herokuapp.com/client', email)
       .then(res => {
-        console.log(res);
-        console.log(res.data)
+        // console.log(res);
+        // console.log(res.data)
       })
   }
   const handleChange = (e) => {
