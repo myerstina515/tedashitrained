@@ -21,7 +21,7 @@ function Footer() {
         <br />
           <a href="mailto:tedashitrained@gmail.com">tedashitrained@gmail.com</a>
         </p>
-        <div class="social-container">
+        <div className="social-container">
           <a id="icon" href="https://www.facebook.com/TedashiMyersCPT/"
             className="facebook social">
             <FontAwesomeIcon icon={faFacebook} size="3x" />
