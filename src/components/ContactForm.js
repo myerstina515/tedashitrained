@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Alert from 'react-bootstrap/Alert';
 import './ContactForm.scss';
 import useAjaxCalls from './hooks/ajax';
 // import { NavItem } from 'react-bootstrap';
 import axios from 'axios';
+// import Popup from 'react-popup';
 
 const ContactForm = (props) => {
   // object model: {
@@ -13,6 +15,7 @@ const ContactForm = (props) => {
   //       "name": "Tina Myers",
   //       "emailAddress": "myers.tina515@gmail.com",
   //       "phoneNumber": 4259618468,
+  //       "preferredContact": "text" 
   //       "trainingType": "group training",
   //       "injury": "false",
   //       "goals": "weight loss",
@@ -21,6 +24,7 @@ const ContactForm = (props) => {
   //   },
   const [URL, list, setList] = useAjaxCalls();
   const [item, setState] = useState({});
+  const [show, setShow] = useState(false);
 
   const handleChange = (e) => {
     setState({ ...item, [e.target.name]: e.target.value })
@@ -28,6 +32,9 @@ const ContactForm = (props) => {
     // console.log('what type', typeof(item.date))
   };
 
+  // let completedForm = false;
+// console.log(completedForm)
+  // const notify = () => toast("Thank you for submitting!")
   const handleSubmit = async (e) => {
     // console.log(URL)
     e.preventDefault();
@@ -49,6 +56,9 @@ const ContactForm = (props) => {
         // console.log('inside the .then ', results);
         setList([...list, results.data]);
         // console.log('after set list', results.data);
+        // completedForm = true;
+        console.log("inside the function")
+        setShow(true)
       })
       .catch((err) => {
         console.error(err)
@@ -144,7 +154,7 @@ const ContactForm = (props) => {
           </Form.Group>
           <Form.Group onChange={handleChange} name="routedFrom">
             <Form.Label>How did you find me?</Form.Label>
-            <Form.Check
+            {/* <Form.Check
               type="radio"
               name="routedFrom"
               label="Google Search"
@@ -167,8 +177,8 @@ const ContactForm = (props) => {
               name="routedFrom"
               label="Client Referral"
               value="false"
-            />
-            <Form.Label>Specifically</Form.Label>
+            /> */}
+            {/* <Form.Label>Specifically</Form.Label> */}
             <Form.Control onChange={handleChange} as="textarea" rows={1} name="referredBy" />
           </Form.Group>
 
@@ -180,8 +190,21 @@ const ContactForm = (props) => {
             <Form.Label>Message</Form.Label>
             <Form.Control onChange={handleChange} as="textarea" rows={5} name="message" />
           </Form.Group>
+          {show
+          ?
+          <Alert variant="success" onClose={() => setShow(false)}>
+            <Alert.Heading>Success!</Alert.Heading>
+              <p>
+                Thank you for submitting your information! Tedashi will get back to you as soon as he can!
+              </p>
+          </Alert>
+          :
           <Button id="emailButton" variant="dark" type="submit">Submit Inquiry</Button>
+        }           
+          {/* <Button id="emailButton" variant="dark" type="submit">Submit Inquiry</Button> */}
+          {/* <ToastContainer /> */}
         </Form>
+        {/* <Popup /> */}
       </div>
     </>
   )
