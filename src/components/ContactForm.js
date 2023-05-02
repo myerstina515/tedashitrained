@@ -4,7 +4,9 @@ import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 import './ContactForm.scss';
 import useAjaxCalls from './hooks/ajax';
+// import { NavItem } from 'react-bootstrap';
 import axios from 'axios';
+// import Popup from 'react-popup';
 
 const ContactForm = (props) => {
   // object model: {
@@ -26,9 +28,15 @@ const ContactForm = (props) => {
 
   const handleChange = (e) => {
     setState({ ...item, [e.target.name]: e.target.value })
+    // console.log('item in handlechange ', item)
+    // console.log('what type', typeof(item.date))
   };
 
+  // let completedForm = false;
+// console.log(completedForm)
+  // const notify = () => toast("Thank you for submitting!")
   const handleSubmit = async (e) => {
+    // console.log(URL)
     e.preventDefault();
     axios.post(URL, {
       
@@ -45,12 +53,19 @@ const ContactForm = (props) => {
       newsletter: item.newsletter
     })
       .then(results => {
+        // console.log('inside the .then ', results);
         setList([...list, results.data]);
+        // console.log('after set list', results.data);
+        // completedForm = true;
+        console.log("inside the function")
+        setShow(true)
       })
       .catch((err) => {
         console.error(err)
       })
     e.target.reset();
+    // console.log('this is the item in handlesubmit: ', item);
+    // props.handleSubmit(item);
     setState({});
   };
 
@@ -103,12 +118,12 @@ const ContactForm = (props) => {
               label="1 on 1 (online)"
               value="1-on-1 (online)"
             />
-            {/* <Form.Check
+            <Form.Check
               type="radio"
               name="trainingType"
               label="CMT small group (online)"
               value="CMT"
-            /> */}
+            />
             <Form.Check
               type="radio"
               name="trainingType"
@@ -177,16 +192,19 @@ const ContactForm = (props) => {
           </Form.Group>
           {show
           ?
-          <Alert variant="success" onClose={() => setShow(false)} dismissable="true">
+          <Alert variant="success" onClose={() => setShow(false)}>
             <Alert.Heading>Success!</Alert.Heading>
               <p>
                 Thank you for submitting your information! Tedashi will get back to you as soon as he can!
               </p>
           </Alert>
           :
-          <Button onClick={() => setShow(true)} id="emailButton" variant="dark" type="submit">Submit Inquiry</Button>
+          <Button id="emailButton" variant="dark" type="submit">Submit Inquiry</Button>
         }           
+          {/* <Button id="emailButton" variant="dark" type="submit">Submit Inquiry</Button> */}
+          {/* <ToastContainer /> */}
         </Form>
+        {/* <Popup /> */}
       </div>
     </>
   )
