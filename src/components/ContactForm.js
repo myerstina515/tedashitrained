@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Alert from 'react-bootstrap/Alert';
 import './ContactForm.scss';
 import useAjaxCalls from './hooks/ajax';
-// import { NavItem } from 'react-bootstrap';
 import axios from 'axios';
 
 const ContactForm = (props) => {
@@ -13,6 +13,7 @@ const ContactForm = (props) => {
   //       "name": "Tina Myers",
   //       "emailAddress": "myers.tina515@gmail.com",
   //       "phoneNumber": 4259618468,
+  //       "preferredContact": "text" 
   //       "trainingType": "group training",
   //       "injury": "false",
   //       "goals": "weight loss",
@@ -21,15 +22,13 @@ const ContactForm = (props) => {
   //   },
   const [URL, list, setList] = useAjaxCalls();
   const [item, setState] = useState({});
+  const [show, setShow] = useState(false);
 
   const handleChange = (e) => {
     setState({ ...item, [e.target.name]: e.target.value })
-    // console.log('item in handlechange ', item)
-    // console.log('what type', typeof(item.date))
   };
 
   const handleSubmit = async (e) => {
-    // console.log(URL)
     e.preventDefault();
     axios.post(URL, {
       
@@ -46,16 +45,12 @@ const ContactForm = (props) => {
       newsletter: item.newsletter
     })
       .then(results => {
-        // console.log('inside the .then ', results);
         setList([...list, results.data]);
-        // console.log('after set list', results.data);
       })
       .catch((err) => {
         console.error(err)
       })
     e.target.reset();
-    // console.log('this is the item in handlesubmit: ', item);
-    // props.handleSubmit(item);
     setState({});
   };
 
@@ -108,12 +103,12 @@ const ContactForm = (props) => {
               label="1 on 1 (online)"
               value="1-on-1 (online)"
             />
-            <Form.Check
+            {/* <Form.Check
               type="radio"
               name="trainingType"
               label="CMT small group (online)"
               value="CMT"
-            />
+            /> */}
             <Form.Check
               type="radio"
               name="trainingType"
@@ -144,7 +139,7 @@ const ContactForm = (props) => {
           </Form.Group>
           <Form.Group onChange={handleChange} name="routedFrom">
             <Form.Label>How did you find me?</Form.Label>
-            <Form.Check
+            {/* <Form.Check
               type="radio"
               name="routedFrom"
               label="Google Search"
@@ -167,8 +162,8 @@ const ContactForm = (props) => {
               name="routedFrom"
               label="Client Referral"
               value="false"
-            />
-            <Form.Label>Specifically</Form.Label>
+            /> */}
+            {/* <Form.Label>Specifically</Form.Label> */}
             <Form.Control onChange={handleChange} as="textarea" rows={1} name="referredBy" />
           </Form.Group>
 
@@ -180,7 +175,17 @@ const ContactForm = (props) => {
             <Form.Label>Message</Form.Label>
             <Form.Control onChange={handleChange} as="textarea" rows={5} name="message" />
           </Form.Group>
-          <Button id="emailButton" variant="dark" type="submit">Submit Inquiry</Button>
+          {show
+          ?
+          <Alert variant="success" onClose={() => setShow(false)} dismissable="true">
+            <Alert.Heading>Success!</Alert.Heading>
+              <p>
+                Thank you for submitting your information! Tedashi will get back to you as soon as he can!
+              </p>
+          </Alert>
+          :
+          <Button onClick={() => setShow(true)} id="emailButton" variant="dark" type="submit">Submit Inquiry</Button>
+        }           
         </Form>
       </div>
     </>
