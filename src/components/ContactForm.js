@@ -42,6 +42,7 @@ const ContactForm = (props) => {
       
       name: item.name,
       date: item.date,
+      preferredContact: item.preferredContact,
       emailAddress: item.emailAddress,
       phoneNumber: item.phoneNumber,
       trainingType: item.trainingType,
@@ -81,6 +82,27 @@ const ContactForm = (props) => {
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Today's Date</Form.Label>
             <Form.Control onChange={handleChange} name="date" type="date" required></Form.Control>
+          </Form.Group>
+          <Form.Group className="mb-3" onChange={handleChange}>
+            <Form.Label>How do you want to be contacted? (select one)</Form.Label>
+            <Form.Check
+              type="radio"
+              name="preferredContact"
+              value="email"
+              label="E-mail"
+            />
+            <Form.Check
+              type="radio"
+              name="preferredContact"
+              label="Text message"
+              value="Text message"
+            />
+            <Form.Check
+              type="radio"
+              name="preferredContact"
+              label="Phone Call"
+              value="Phone Call (provide general availability in 'Message' section below)"
+            />
           </Form.Group>
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Email address</Form.Label>
