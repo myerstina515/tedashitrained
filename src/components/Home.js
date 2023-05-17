@@ -3,6 +3,7 @@ import ImageCarousel from './ImageCarousel';
 import Cards from './Cards';
 import Video from './Video';
 import { useState } from 'react';
+import Alert from 'react-bootstrap/Alert';
 import axios from 'axios';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -12,6 +13,7 @@ import './Home.scss';
 
 const Home = () => {
   const [emailAddress, setEmail] = useState('');
+  const [show, setShow] = useState(false);
 
   // const Date = () => {
   //   let newDate = new Date()
@@ -38,6 +40,7 @@ const Home = () => {
       .then(res => {
         // console.log(res);
         // console.log(res.data)
+        setShow(true)
       })
   }
   const handleChange = (e) => {
@@ -50,12 +53,23 @@ const Home = () => {
       <ImageCarousel />
       <Cards />
       <Video />
+      { show
+        ?
+          <Alert id="successSubmit" variant="success" onClose={() => setShow(false)}>
+            <Alert.Heading>Success!</Alert.Heading>
+              <p>
+                Thank you for signing up for our newsletter!
+              </p>
+          </Alert>
+        :
       <Form id="emailSignUp" onSubmit={emailSignUp}>
           <Form.Label>Sign up for our newsletter!</Form.Label>
           {/* <br/> */}
+          
           <Form.Control id="emailInput" onChange={handleChange} type="text" placeholder="Enter email address" />
           <Button id="emailButton" variant="dark" type="submit">Sign Up</Button>
       </Form>
+      }
 
       {/* <form id="emailSignUp" onSubmit={emailSignUp}>
         <label>Sign up for our newsletter!</label>
