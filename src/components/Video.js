@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Video.scss";
 
 const Video = () => {
 
@@ -15,9 +16,9 @@ const Video = () => {
   return (
     <>
       <hr />
-      <div id="videoSection1" >
-        <div href="https://www.youtube.com/watch?v=XQbFt3pzeNc">
-
+      <div id="videoSection1">
+        <div>
+          <iframe width="448" height="252" src="https://www.youtube.com/embed/XQbFt3pzeNc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
       <div id="videoSection" >
