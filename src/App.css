@@ -1,4 +1,15 @@
 @media(max-width: 539px){
+  #root{
+    width: 100%
+  }
+  #bodyArea{
+    height: 100vh;
+  }
+  #logo{
+    width: 50%;
+    margin-right: 2vw;
+    /* border-radius: 5px; */
+  }
   #videoSection{
     margin: 0 20px;
     display: block;
