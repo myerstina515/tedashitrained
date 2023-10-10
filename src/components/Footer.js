@@ -5,7 +5,7 @@ import {
   faFacebook,
   faInstagram
 } from "@fortawesome/free-brands-svg-icons";
-import Logo from '../assets/LogoTT.jpg';
+import Logo from '../assets/FBFLogo.JPG';
 import Advocare from '../assets/advocare-logo-black-and-white.png';
 
 
@@ -13,14 +13,15 @@ function Footer() {
   return (
     <div className="footer">
       <footer>
-        <hr />
+        {/* <hr /> */}
         
           
-        <p id="footer"><img id="logo2" src={Logo} alt="Tedashi Trained Kettlebell Logo (small)"/>Tedashi Trained &copy; 2021
+        {/* <p id="footer"> */}
+          <img id="logo2" src={Logo} alt="Tedashi Trained Kettlebell Logo (small)"/>Forever Body Fitness &copy; 2021
         
+        {/* </p> */}
         <br />
           <a href="mailto:tedashitrained@gmail.com">tedashitrained@gmail.com</a>
-        </p>
         <div className="social-container">
           <a id="icon" href="https://www.facebook.com/TedashiMyersCPT/"
             className="facebook social">

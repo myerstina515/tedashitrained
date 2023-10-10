@@ -15,6 +15,7 @@ import Kettlebell from './components/Kettlebell';
 function App() {
   return (
     <>
+    <div className='content-container'>
       <Header/>
       <Switch>
         <Route path='/' component={Home} exact/>
@@ -25,6 +26,7 @@ function App() {
         <Route path='/contact' component={ContactForm} exact />
         <Route path='/kettlebell' component={Kettlebell} exact />
       </Switch>
+      </div>
       <Footer/>
     </>
   );
