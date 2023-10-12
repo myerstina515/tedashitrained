@@ -8,15 +8,14 @@
   #logo{
     width: 50%;
     margin-right: 2vw;
-    /* border-radius: 5px; */
   }
   #videoSection{
     margin: 0 20px;
     display: block;
   }  
+ 
   .flip-card{
     width: 300px;
-    /* height: 240px; */
   }
   .flip-card-front, .flip-card-back {
 
@@ -40,14 +39,11 @@
     max-height:100%;
     max-width:100%;
   }
-  #images{
-    height: 30vh;
-  }
   #carouselImages{
     height: 30vh;
   }
   #caption{
-    height: 7vh;
+    height: 3vh;
     color: white;
     font-size: 1vh;
     margin-bottom: 0.5em;
@@ -59,7 +55,6 @@
   }
   #h3{
     font-size: 1.4vh;
-    /* background-color: rgba(0, 0, 0, 0.735); */
   }
   .container{
     width: 375px;
