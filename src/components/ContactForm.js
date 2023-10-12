@@ -143,8 +143,8 @@ const ContactForm = (props) => {
             <Form.Check
               type="radio"
               name="trainingType"
-              label="CMT small group (online)"
-              value="CMT"
+              label="InBody Scanning Only"
+              value="InBody"
             />
             <Form.Check
               type="radio"
