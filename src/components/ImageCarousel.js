@@ -9,7 +9,7 @@ const ImageCarousel = () => {
   return (
     <>
       <div id="testing">
-        <Carousel id="carousel">
+        <Carousel id="carousel" controls={false}>
           <Carousel.Item id="carouselImages" interval={5000}>
             <img
               id="images"
