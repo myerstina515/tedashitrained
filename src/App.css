@@ -124,17 +124,17 @@
     width: 375px;
     display: block;
   }
-  #images{
+  /* #images{
     height: 50vh;
-  }
+  } */
   /* #carouselImages{
     height: 50vh;
   } */
-  #caption{
+  /* #caption{
     height: 5vh;
     color: black;
     font-size: 1.1vh;
-  }
+  } */
   #h3{
     font-size: 1.3vh;
   }
@@ -240,11 +240,11 @@
     padding-left: 10vw;
     border: 8px inset rgba(201, 201, 201, 0.851);
   }
-  #caption{
+  /* #caption{
     height: 10vh;
     color: black;
     font-size: 1.5vh;
-  }
+  } */
   #h3{
     font-size: 2vh;
   }
