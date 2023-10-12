@@ -6,6 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Adi from '../assets/AdiOnline.PNG';
 import Stephanie from '../assets/stephanie.PNG';
 import Nora from '../assets/Nora.PNG';
+import InBody from '../assets/InBody.jpg';
 import './Cards.scss';
 
 
@@ -80,6 +81,30 @@ const Cards = () => {
             </div>
           </div>
         </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div id="stephanie" class="flip-card-front">
+              <img class="cardBackground" alt="Online Training" src={InBody} />
+
+              <a href="/Services" id="cardDesc">InBody Scanning</a>
+
+            </div>
+            <div class="flip-card-back">
+              <Grid item xs={12}>
+                <Card className="root" variant="outlined">
+                  <CardContent class="backContent">
+                    <Typography id="question" color="textSecondary" gutterBottom>
+                      InBody scans are included in each package at Forever Body Fitness, but if you're currently working with another trainer/program, or just want to keep tabs on your body composition, there is always an a la carte option!
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+              <a href="/Services" id="cardDesc">InBody Scanning</a>
+            </div>
+          </div>
+        </div>
+
         {/* <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
