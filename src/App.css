@@ -39,9 +39,9 @@
     max-height:100%;
     max-width:100%;
   }
-  #carouselImages{
+  /* #carouselImages{
     height: 30vh;
-  }
+  } */
   #caption{
     height: 3vh;
     color: white;
@@ -127,9 +127,9 @@
   #images{
     height: 50vh;
   }
-  #carouselImages{
+  /* #carouselImages{
     height: 50vh;
-  }
+  } */
   #caption{
     height: 5vh;
     color: black;
@@ -189,9 +189,9 @@
   #images{
     height: 100vh;
   }
-  #carouselImages{
+  /* #carouselImages{
     height: 100vh;
-  }
+  } */
   #question{
     width: 75%;
     font-size: 1.1em;
