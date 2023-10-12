@@ -3,6 +3,7 @@ import './Services.scss';
 import Ashley from '../assets/TedashiAndAshleyResized.jpg';
 import Nathania from '../assets/Nathania2.jpg';
 import TedashiGroupTraining from '../assets/TedashiGroupTraining2.jpg';
+import InBody from '../assets/InBody.jpg';
 // import '../App.css';
 
 const Services = () => {
@@ -47,14 +48,14 @@ const Services = () => {
         <div id="rightDiv"><img id="displayImages" alt="virtual/online training" src={TedashiGroupTraining}></img></div>
       </div>
       <div id="containerLeft">
-        <div id="display"><img id="displayImages" alt="one on one training" src={TedashiGroupTraining}>
+        <div id="display"><img id="displayImages" alt="one on one training" src={InBody}>
         </img></div>
         <div id="textDiv" class="left">
-          <h2>Training Club (Group Training) </h2>
-          <p id="pTag">Train in a group is an affordable way to have fun and still have semi-personal attention to your fitness journey. With custom designed workouts designed to push you, have fun, and safer than you would on your own. </p>
-          <p id="pTag">You will be provided accountability and motivation that you need to stay on track and consistently adjust your program to avoid plateaus. Modifications can be made to any exercise depending on fitness level or any pre-existing injuries when necessary and having a trainer there allows you to keep it safe, fun, and challening. </p>
-          <p id="pTag">All Training Club Sessions are 50 Min Long, and include:</p>
-          <ul>
+          <h2>InBody Scanning</h2>
+          <p id="pTag">An InBody Scanner is a device that uses bioelectrical impedance analysis (BIA) to measure body composition. It can measure muscle mass, fat mass, and water in the body, and can differentiate where in your body the different types of tissue are located, and can even tell you how your muscle mass compares to others in a similar age range! The InBody Scanner is generally considered an accurate way to measure body composition.</p>
+          <p id="pTag">This is a service that is offered with any package at Forever Body Fitness. There is also an a la carte option if you are working with a different trainer, program, or just want to periodically check your body composition - in these cases we can schedule just the InBody scans as a single scan or as a package. The scan takes only a few minutes and can provide important information about the composition of your body.</p>
+          {/* <p id="pTag">All Training Club Sessions are 50 Min Long, and include:</p> */}
+          {/* <ul>
             <li>Email communication to help with any questions or issues that may arise</li>
             <li>Text message availability for questions that will be returned within <b>24 Hours</b></li>
             <li>Semi-Personalized Programming specified for your goals </li>
@@ -62,8 +63,8 @@ const Services = () => {
             <li>Fun, inventive workouts that will make sure you never get bored!</li>
             <li>A fun and exciting Personal Trainer with 10+ years of experience to help you change your life, like a close friend would</li>
             <li>Group of peers to also keep you accountable to make the setting feel more enjoyable</li>
-          </ul>
-          <p id="pTag">To learn more about in-person training, please fill out <a href="/contact">request info form</a>, and you will be contacted to develop a plan that is right for you. Every client is given a complimentary consultation to make sure this is the right fit for you!</p>
+          </ul> */}
+          <p id="pTag">To learn more about InBody Scanning, please fill out <a href="/contact">request info form</a>, and you will be contacted to develop a plan that is right for you. First InBody scan is free!</p>
         </div>
       </div>
     </>
