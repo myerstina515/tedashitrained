@@ -18,7 +18,7 @@ const Video = () => {
       <hr />
       <div id="videoSection1">
         <div>
-          <iframe width="448" height="252" src="https://www.youtube.com/embed/XQbFt3pzeNc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe id="video" width="348" height="196" src="https://www.youtube.com/embed/XQbFt3pzeNc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
       <div id="videoSection" >
