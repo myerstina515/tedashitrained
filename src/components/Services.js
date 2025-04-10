@@ -2,7 +2,8 @@ import React from 'react';
 import './Services.scss';
 import Ashley from '../assets/TedashiAndAshleyResized.jpg';
 import Nathania from '../assets/Nathania2.jpg';
-import TedashiGroupTraining from '../assets/TedashiGroupTraining2.jpg';
+import WellnessWords from '../assets/Wellness-Words2.jpg';
+import TedashiGroupTraining from '../assets/TedashiGroupTraining2.jpg'
 import InBody from '../assets/InBody.jpg';
 // import '../App.css';
 
@@ -66,6 +67,24 @@ const Services = () => {
           </ul> */}
           <p id="pTag">To learn more about InBody Scanning, please fill out <a href="/contact">request info form</a>, and you will be contacted to develop a plan that is right for you. First InBody scan is free!</p>
         </div>
+      </div>
+      <div id="containerRight">
+        <div id="textDiv">
+          <h2>Health & Wellness Training</h2>
+          <p id="pTag">Coming Soon!</p>
+          {/* <p id="pTag">Achieve your goals from the convince of Zoom sessions, that are recorded and uploaded privately to YouTube via a link that is provided for easy reference in your online client folder. All you need is a computer, tablet, smartphone, or smart TV with a good internet connection.</p> */}
+          {/* <p id="pTag">Equipment is not needed or required. Online personal training is able to bring real time feedback and cueing, and allows for the feel of an in-person personal training session at home! It includes:</p> */}
+          {/* <ul>
+            <li>Online digital client folder</li>
+            <li>Catalog of previous session links for reference</li>
+            <li>Email communication to help with any questions or issues that may arise</li>
+            <li>Personalized programming specific for your goals</li>
+            <li>Accountability to make sure you're keeping the commitment to yourself</li>
+            <li>Fun, inventive workouts that will make sure you never get bored!</li>
+          </ul> */}
+          {/* <p id="pTag">To learn more about online/virtual training, please fill out <a href="/contact">request info form</a>, and you will be contacted to develop a plan that is right for you. Every client is given a complimentary consultation to make sure this is the right fit for you! </p> */}
+        </div>
+        <div id="rightDiv"><img id="displayImages" alt="virtual/online training" src={WellnessWords}></img></div>
       </div>
     </>
   )

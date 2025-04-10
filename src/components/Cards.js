@@ -4,7 +4,7 @@ import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent';
 import Adi from '../assets/AdiOnline.PNG';
-import Stephanie from '../assets/stephanie.PNG';
+import Filler from '../assets/Wellness-Words2.jpg';
 import Nora from '../assets/Nora.PNG';
 import InBody from '../assets/InBody.jpg';
 import './Cards.scss';
@@ -18,9 +18,9 @@ const Cards = () => {
         <div class="flip-card">
           <div class="flip-card-inner">
             <div id="stephanie" class="flip-card-front">
-              <img class="cardBackground" alt="Group Training" src={Stephanie} />
+              <img class="cardBackground" alt="Health & Wellness Coaching" src={Filler} />
 
-              <a href="./Services" id="cardDesc">Group Training</a>
+              <a href="./Services" id="cardDesc">Health & Wellness Coaching</a>
 
             </div>
             <div class="flip-card-back">
@@ -28,12 +28,12 @@ const Cards = () => {
                 <Card className="root" variant="outlined">
                   <CardContent className="backContent">
                     <Typography id="question" color="textSecondary" gutterBottom>
-                      Group Training - Providing a safe place to workout with others that just want to better themselves in a fun, interactive environment where no matter what level you are at, there will be progressions or modifications available to keep you safe!
+                      Health & Wellness Coaching - Health and wellness coaching empowers individuals to achieve their well-being goals through personalized guidance, support, and sustainable lifestyle changes; it fosters self-awareness and accountability for lasting positive transformation.
                     </Typography>
                   </CardContent>
                 </Card>
               </Grid>
-              <a href="./Services" id="cardDesc">Group Training</a>
+              <a href="./Services" id="cardDesc">Health & Wellness Coaching</a>
             </div>
           </div>
         </div>
