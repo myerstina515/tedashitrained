@@ -131,12 +131,6 @@ const ContactForm = (props) => {
             <Form.Check
               type="radio"
               name="trainingType"
-              label="Group (in person)"
-              value="Group: In Person"
-            />
-            <Form.Check
-              type="radio"
-              name="trainingType"
               label="1 on 1 (online)"
               value="1-on-1 (online)"
             />
