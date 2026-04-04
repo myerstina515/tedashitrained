@@ -1,7 +1,7 @@
 import Header from './components/Header';
 import './App.scss';
 import Home from './components/Home';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Services from './components/Services';
 import Blog from './components/Blog';
 import Testimonials from './components/Testimonials';
@@ -17,15 +17,15 @@ function App() {
     <>
     <div className='content-container'>
       <Header/>
-      <Switch>
-        <Route path='/' component={Home} exact/>
-        <Route path='/services' component={Services} exact/>
-        <Route path='/blog' component={Blog} exact />
-        <Route path='/testimonials' component={Testimonials} exact />
-        <Route path='/aboutme' component={AboutMe} exact />
-        <Route path='/contact' component={ContactForm} exact />
-        <Route path='/kettlebell' component={Kettlebell} exact />
-      </Switch>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/testimonials' element={<Testimonials />} />
+        <Route path='/aboutme' element={<AboutMe />} />
+        <Route path='/contact' element={<ContactForm />} />
+        <Route path='/kettlebell' element={<Kettlebell />} />
+      </Routes>
       </div>
       <Footer/>
     </>
