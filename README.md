@@ -21,3 +21,7 @@ The deployed front-end application lives [here at Heroku](https://tedashi-traine
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ![image](./src/assets/LogoTT.jpg)
+
+## Build History & Troubleshooting
+- [Stable React 18 / MUI v4 Build Logic](https://www.google.com/search?q=why+does+my+macbook+not+have+the+option+of+upgrading+to+tahoe&rlz=1C5CHFA_enUS917US920&oq=why+does+my+macbook+not+have+the+option+of+upgrading+to+tahoe&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTE3MDk1ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8)
+
