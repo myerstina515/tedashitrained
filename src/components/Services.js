@@ -68,7 +68,7 @@ const Services = () => {
           <p id="pTag">To learn more about InBody Scanning, please fill out <a href="/contact">request info form</a>, and you will be contacted to develop a plan that is right for you. First InBody scan is free!</p>
         </div>
       </div>
-      <div id="containerRight">
+      <div id="containerRight" style={{ marginBottom: '150px'}}>
         <div id="textDiv">
           <h2>Health & Wellness Training</h2>
           <p id="pTag">At Forever Body Fitness, we believe lasting transformation comes from building sustainable habits — not following extreme diets or unrealistic workout plans. That’s why every client starts with the Forever Body Blueprint™, a personalized strategy designed around your lifestyle, goals, schedule, movement patterns, nutrition habits, and recovery needs. Whether your goal is fat loss, increased strength, better mobility, more energy, or simply feeling better in your body again, your program is customized to fit YOUR life.</p>
