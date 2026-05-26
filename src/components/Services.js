@@ -2,7 +2,7 @@ import React from 'react';
 import './Services.scss';
 import Ashley from '../assets/TedashiAndAshleyResized.jpg';
 import Nathania from '../assets/Nathania2.jpg';
-import WellnessWords from '../assets/Wellness-Words2.jpg';
+import FBBlueprint from '../assets/FBBlueprint.PNG';
 import TedashiGroupTraining from '../assets/TedashiGroupTraining2.jpg'
 import InBody from '../assets/InBody.jpg';
 // import '../App.css';
@@ -71,7 +71,9 @@ const Services = () => {
       <div id="containerRight">
         <div id="textDiv">
           <h2>Health & Wellness Training</h2>
-          <p id="pTag">Coming Soon!</p>
+          <p id="pTag">At Forever Body Fitness, we believe lasting transformation comes from building sustainable habits — not following extreme diets or unrealistic workout plans. That’s why every client starts with the Forever Body Blueprint™, a personalized strategy designed around your lifestyle, goals, schedule, movement patterns, nutrition habits, and recovery needs. Whether your goal is fat loss, increased strength, better mobility, more energy, or simply feeling better in your body again, your program is customized to fit YOUR life.</p>
+          <p id="pTag">Once your blueprint is created, we guide you through a structured coaching system that includes personalized workouts, nutrition guidance, accountability, habit coaching, and ongoing support to help you create long-term results you can actually maintain. This program is designed for busy professionals, office workers, parents, and anyone tired of starting over with fitness. Our mission is simple: help you build a stronger, healthier, more energized version of yourself — your Forever Body™.</p>
+          <p id="pTag"><a href="/contact">Start Your Forever Body Blueprint™</a></p>
           {/* <p id="pTag">Achieve your goals from the convince of Zoom sessions, that are recorded and uploaded privately to YouTube via a link that is provided for easy reference in your online client folder. All you need is a computer, tablet, smartphone, or smart TV with a good internet connection.</p> */}
           {/* <p id="pTag">Equipment is not needed or required. Online personal training is able to bring real time feedback and cueing, and allows for the feel of an in-person personal training session at home! It includes:</p> */}
           {/* <ul>
@@ -84,7 +86,7 @@ const Services = () => {
           </ul> */}
           {/* <p id="pTag">To learn more about online/virtual training, please fill out <a href="/contact">request info form</a>, and you will be contacted to develop a plan that is right for you. Every client is given a complimentary consultation to make sure this is the right fit for you! </p> */}
         </div>
-        <div id="rightDiv"><img id="displayImages" alt="virtual/online training" src={WellnessWords}></img></div>
+        <div id="rightDiv"><img id="displayImages" alt="virtual/online training" src={FBBlueprint}></img></div>
       </div>
     </>
   )
