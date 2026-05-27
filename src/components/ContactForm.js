@@ -149,8 +149,8 @@ const ContactForm = (props) => {
             <Form.Check
               type="radio"
               name="trainingType"
-              label="Nutrition coaching"
-              value="Nutrition Coaching"
+              label="Forever Body Blueprint™"
+              value="Forever Body Blueprint™"
             />
           </Form.Group>
           <Form.Group onChange={handleChange} name="injury">

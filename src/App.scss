@@ -1,13 +1,19 @@
 @import "~bootstrap/scss/bootstrap";
 
 body{
-  height: 2000px;
-  margin: 0 0 170px 0;
-  padding: 0 0 170px 0;
+  height: auto;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
 
 }
+
+.content-container {
+  padding-bottom: 150px;
+}
+
 #heading{
   font-size: 25px;
 }
