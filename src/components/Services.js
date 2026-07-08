@@ -3,7 +3,7 @@ import './Services.scss';
 import Ashley from '../assets/TedashiAndAshleyResized.jpg';
 import Nathania from '../assets/Nathania2.jpg';
 import FBBlueprint from '../assets/FBBlueprint.PNG';
-import TedashiGroupTraining from '../assets/TedashiGroupTraining2.jpg'
+import Online from '../assets/AdiOnline.PNG'
 import InBody from '../assets/InBody.jpg';
 // import '../App.css';
 
@@ -46,7 +46,7 @@ const Services = () => {
           </ul>
           <p id="pTag">To learn more about online/virtual training, please fill out <a href="/contact">request info form</a>, and you will be contacted to develop a plan that is right for you. Every client is given a complimentary consultation to make sure this is the right fit for you! </p>
         </div>
-        <div id="rightDiv"><img id="displayImages" alt="virtual/online training" src={TedashiGroupTraining}></img></div>
+        <div id="rightDiv"><img id="displayImages" alt="virtual/online training" src={Online}></img></div>
       </div>
       <div id="containerLeft">
         <div id="display"><img id="displayImages" alt="one on one training" src={InBody}>
