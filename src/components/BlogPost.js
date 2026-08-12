@@ -1,27 +1,40 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-// import { PortableText } from '@portabletext/react';
+import { PortableText } from '@portabletext/react';
 import { POST_QUERY } from '../sanity/queries.js';
 import './BlogPost.scss';
 import client from '../sanity/client.js';
+import urlBuilder from '@sanity/image-url';
 
-// const POST_QUERY = `*[
-//   _type == "post" &&
-//   slug.current == $slug
-// ][0] {
-//   _id,
-//   title,
-//   slug,
-//   publishedAt,
-//   mainImage {
-//     asset-> {
-//       _id,
-//       url
-//     },
-//     alt
-//   },
-//   body
-// }`;
+const builder = urlBuilder(client);
+
+const getImageUrl = (source) => {
+  return builder.image(source);
+};
+
+const portableTextComponents = {
+  types: {
+    image: ({ value }) => {
+      if (!value?.asset?._ref) {
+        return null;
+      }
+
+      return (
+        <img
+          className="blog-post-inline-image"
+          src={getImageUrl(value)}
+          alt={value.alt || ''}
+        />
+      );
+    },
+  },
+};
+const formatDate = (date) =>
+  new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  }).format(new Date(date));
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -37,6 +50,7 @@ const BlogPost = () => {
     client
       .fetch(POST_QUERY, { slug })
       .then((data) => {
+        console.log('BLOG POST:', data);
         setPost(data);
         setLoading(false);
       })
@@ -50,7 +64,7 @@ const BlogPost = () => {
   if (loading) {
     return (
       <main id="blog-post">
-        <p>Loading post...</p>
+        <p className="blog-post-status">Loading post...</p>
       </main>
     );
   }
@@ -58,8 +72,12 @@ const BlogPost = () => {
   if (error) {
     return (
       <main id="blog-post">
-        <p>Unable to load this blog post.</p>
-        <Link to="/blog">Return to blog</Link>
+        <p className="blog-post-status">
+          Unable to load this blog post.
+        </p>
+        <Link className="blog-post-back-link" to="/blog">
+          Return to blog
+        </Link>
       </main>
     );
   }
@@ -67,34 +85,61 @@ const BlogPost = () => {
   if (!post) {
     return (
       <main id="blog-post">
-        <p>Blog post not found.</p>
-        <Link to="/blog">Return to blog</Link>
+        <p className="blog-post-status">Blog post not found.</p>
+        <Link className="blog-post-back-link" to="/blog">
+          Return to blog
+        </Link>
       </main>
     );
   }
 
   return (
     <main id="blog-post">
-      <Link to="/blog">Back to blog</Link>
+      <div className="blog-post-container">
+        <Link className="blog-post-back-link" to="/blog">
+          <span aria-hidden="true">←</span> Back to blog
+        </Link>
 
-      <article>
-        <h1>{post.title}</h1>
+        <article>
+          {post.imageUrl && (
+            <div className="blog-post-hero">
+              <img
+                src={post.imageUrl}
+                alt={post.imageAlt || post.title}
+              />
+            </div>
+          )}
 
-        {post.publishedAt && (
-          <p>{new Date(post.publishedAt).toLocaleDateString()}</p>
-        )}
+          <header className="blog-post-heading">
+            <p className="blog-post-eyebrow">
+              Forever Body Fitness
+            </p>
 
-        {post.mainImage?.asset?.url && (
-          <img
-            src={post.mainImage.asset.url}
-            alt={post.mainImage.alt || post.title}
-          />
-        )}
-        <pre>
-          {JSON.stringify(post.body, null, 2)}
-        </pre>
-        {/* {post.body && <PortableText value={post.body} />} */}
-      </article>
+            <h1>{post.title}</h1>
+
+            {post.publishedAt && (
+              <time
+                className="blog-post-date"
+                dateTime={post.publishedAt}
+              >
+                {formatDate(post.publishedAt)}
+              </time>
+            )}
+          </header>
+
+          <div className="blog-post-body">
+            {/* <pre>
+              {JSON.stringify(post.body, null, 2)}
+            </pre> */}
+            {post.body && (
+              <PortableText
+                value={post.body}
+                components={portableTextComponents}
+              />
+            )}
+          </div>
+        </article>
+      </div>
     </main>
   );
 };
