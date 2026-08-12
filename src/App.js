@@ -5,6 +5,7 @@ import Home from './components/Home';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Services from './components/Services';
 import Blog from './components/Blog';
+import BlogPost from './components/BlogPost';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import './App.css';
@@ -46,6 +47,7 @@ function App() {
         <Route path='/services/InBody' element={<InBody />} />
         <Route path='/services/ForeverBodyBlueprint' element={<Blueprint />} />
         <Route path='/blog' element={<Blog />} />
+        <Route path='/blog/:slug' element={<BlogPost />} />
         <Route path='/testimonials' element={<Testimonials />} />
         <Route path='/aboutme' element={<AboutMe />} />
         <Route path='/contact' element={<ContactForm />} />
