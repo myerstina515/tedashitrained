@@ -1,7 +1,7 @@
 {
   "homepage": "https://myerstina515.github.io/tedashitrained",
   "name": "tedashitrained",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "engines": {
     "node": "18.x",
     "npm": "10.x"
@@ -14,6 +14,10 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
+    "@portabletext/react": "^6.2.0",
+    "@sanity/client": "^7.24.0",
+    "@sanity/image-url": "^2.1.1",
+    "@tailwindcss/typography": "^0.5.20",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.2",
@@ -26,7 +30,7 @@
     "react-popup": "^0.11.0",
     "react-redux": "^7.2.4",
     "react-router-dom": "^6.30.3",
-    "react-scripts": "4.0.3",
+    "react-scripts": "5.0.1",
     "redux": "^4.1.0",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
@@ -61,5 +65,4 @@
   "overrides": {
     "@babel/core": "^7.16.0"
   }
-
 }
