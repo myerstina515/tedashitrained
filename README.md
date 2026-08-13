@@ -1,4 +1,4 @@
-![image](./src/assets/coverPhoto.PNG)
+![image](./src/assets/FBFLogo.JPG)
 
 # Tedashi Trained
 
