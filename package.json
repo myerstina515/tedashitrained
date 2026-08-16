@@ -63,6 +63,6 @@
     ]
   },
   "overrides": {
-    "@babel/core": "^7.16.0"
+    "@babel/core": "^8.0.0"
   }
 }
