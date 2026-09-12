@@ -1,9 +1,10 @@
+@use 'Theme.scss' as theme;
 #blog {
   width: min(1120px, calc(100% - 40px));
   min-height: 60vh;
   margin: 0 auto;
   padding: 64px 0 96px;
-  color: #1f2328;
+  color: theme.$theme-text;
 
   .blog-header {
     max-width: 720px;
@@ -12,7 +13,7 @@
 
   .blog-eyebrow {
     margin: 0 0 8px;
-    color: #62686f;
+    color: theme.$theme-secondary;
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -21,7 +22,7 @@
 
   h1 {
     margin: 0;
-    color: #15181b;
+    color: theme.$theme-text;
     font-size: clamp(2.4rem, 5vw, 4rem);
     font-weight: 700;
     line-height: 1.05;
@@ -35,7 +36,7 @@
   }
 
   .blog-status {
-    color: #555d65;
+    color: theme.$theme-secondary;
     font-size: 1rem;
   }
 
@@ -50,8 +51,8 @@
     align-items: stretch;
     overflow: hidden;
     min-height: 250px;
-    background: #ffffff;
-    border: 1px solid #e3e6e8;
+    background: theme.$theme-surface;
+    border: 1px solid theme.$theme-secondary;
     border-radius: 16px;
     box-shadow: 0 12px 30px rgba(18, 24, 30, 0.08);
     transition:
@@ -103,14 +104,14 @@
     height: 100%;
     min-height: 250px;
     padding: 24px;
-    color: #ffffff;
+    color: theme.$theme-background;
     background:
       linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.05),
         rgba(255, 255, 255, 0)
       ),
-      #20252a;
+      theme.$theme-primary;
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -128,7 +129,7 @@
 
   .blog-card-date {
     margin-bottom: 14px;
-    color: #6b7279;
+    color: theme.$theme-secondary;
     font-size: 0.84rem;
     font-weight: 600;
     letter-spacing: 0.04em;
@@ -142,13 +143,13 @@
   }
 
   .blog-card h2 a {
-    color: #171a1d;
+    color: theme.$theme-text;
     text-decoration: none;
   }
 
   .blog-card h2 a:hover,
   .blog-card h2 a:focus-visible {
-    color: #4b535a;
+    color: theme.$theme-primary;
   }
 
   .blog-card-link {
@@ -156,7 +157,7 @@
     gap: 8px;
     align-items: center;
     margin-top: 28px;
-    color: #282d31;
+    color: theme.$theme-text;
     font-size: 0.92rem;
     font-weight: 700;
     text-decoration: none;
@@ -197,7 +198,7 @@
     padding: 0.65rem 0;
     background: none;
     border: none;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid theme.$theme-secondary;
     text-align: left;
     cursor: pointer;
   }

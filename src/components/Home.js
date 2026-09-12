@@ -51,7 +51,9 @@ const Home = () => {
   return (
     <>
       <ImageCarousel />
-      <Cards />
+      <div className="servicesSection">
+        <Cards />
+      </div>
       <Video />
       { show
         ?

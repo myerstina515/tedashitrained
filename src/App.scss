@@ -1,3 +1,4 @@
+@use 'components/Theme.scss' as theme;
 @import "~bootstrap/scss/bootstrap";
 
 body{
@@ -7,22 +8,16 @@ body{
   padding: 0;
   display: flex;
   flex-direction: column;
-
+  background-color: theme.$theme-background;
 }
-
-.content-container {
-  padding-bottom: 150px;
-}
-
 #heading{
   font-size: 25px;
 }
-
-#header{
-  height: 100%;
+#header {
   top: 0;
   position: sticky;
   z-index: 9999;
+  background-color: theme.$theme-primary;
 }
 #videoSection{
   margin: 0 20px;
@@ -39,34 +34,45 @@ body{
   }
 }
 #carousel{
-  background-color: rgba(169, 169, 169, 0.13);
+  background-color: theme.$theme-background ;
 }
 a{
-  color: blue;
+  color: theme.$theme-accent;
 }
-#logo{
-  width: 300px;
-  margin-right: 2vw;
+#logo {
+  height: 90px;
+  width: auto;
+  margin-right: 20px;
 }
-#logo2{
-  width: 100px;
-  margin-right: 1vw;
-  border-radius: 2px;
-}  
+#logo2 {
+  height: 55px;
+  width: auto;
+  background-color: transparent;
+  margin-right: 10px;
+} 
 #logo3{
   width: 60px;
-  background-color: rgb(218, 216, 216);
+  background-color: theme.$theme-secondary;
   border-radius: 10px;
   margin-bottom: 25px;
 }
-// #carouselImages{
-//   height: 100%;
-//   width: 100%;
-//   object-fit: cover;
-// }
-#h3, #p{
-  color: white;
+#carouselImages{
+  height: 55vh;
+  // width: 100%;
+  // object-fit: cover;
 }
-#caption{
-  background-color: rgba(0, 0, 0, 0.735);
+#images{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+} 
+#h3, #p{
+  color: theme.$theme-background;
+}
+// #caption{
+//   background-color: rgba(0, 0, 0, 0.735);
+// }
+#carouselSection {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
