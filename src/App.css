@@ -1,48 +1,59 @@
-@media(max-width: 539px){
-  #root{
+@media(max-width: 539px) {
+  #root {
     width: 100%
   }
-  #bodyArea{
+
+  #bodyArea {
     height: 100vh;
   }
-  #logo{
-    width: 50%;
+
+  #logo {
+    width: 22vw;
+    height: auto;
+    max-width: 85px;
+    min-width: 55px;
     margin-right: 2vw;
   }
-  #videoSection{
+
+  #videoSection {
     margin: 0 20px;
     display: block;
-  }  
- 
-  .flip-card{
+  }
+
+  .flip-card {
     width: 300px;
   }
-  .flip-card-front, .flip-card-back {
+
+  .flip-card-front,
+  .flip-card-back {
 
     background-color: black;
 
-    border-left-color:#eee;
-    border-radius:2px;
-    border-right-color:#eee;
-    border-top-color:#ddd;
-    box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
-    box-sizing:border-box;
-    border:solid 2px;
-    border-bottom-color:#ffe;
-    border-left-color:#eed;
-    border-right-color:#eed;
-    border-top-color:#ccb;
+    border-left-color: #eee;
+    border-radius: 2px;
+    border-right-color: #eee;
+    border-top-color: #ddd;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    border: solid 2px;
+    border-bottom-color: #ffe;
+    border-left-color: #eed;
+    border-right-color: #eed;
+    border-top-color: #ccb;
   }
-  .flip-card-front img, .flip-card-back img{
+
+  .flip-card-front img,
+  .flip-card-back img {
     border: none;
     width: 100%;
-    max-height:100%;
-    max-width:100%;
+    max-height: 100%;
+    max-width: 100%;
   }
+
   /* #carouselImages{
     height: 30vh;
   } */
-  #caption{
+  #caption {
     height: 3vh;
     color: white;
     font-size: 1vh;
@@ -50,80 +61,128 @@
     padding-bottom: 0;
     background-color: rgba(0, 0, 0, 0.735);
   }
-  #p{
+
+  #p {
     background-color: rgba(0, 0, 0, 0.735);
   }
-  #h3{
+
+  #h3 {
     font-size: 1.4vh;
   }
-  .container{
+
+  .container {
     width: 375px;
     display: block;
   }
-  #modalButton{
+
+  #modalButton {
     font-size: 12px;
     width: 100px;
     margin-left: auto;
     margin-right: auto;
   }
-  #modal{
+
+  #modal {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
     font-size: 3vw;
   }
-  #question{
-    width: 75%;
-    font-size: 1em;
+
+  #question {
+    width: 90%;
+    font-size: 0.9em;
     color: black;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2vh;
     text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
+
   /* for the Services.js page */
-  #containerLeft, #containerRight{
-    display:flex;
+  #containerLeft,
+  #containerRight {
+    display: flex;
     flex-wrap: wrap;
     border: 1px black solid;
     padding: 2vw;
     margin: 3vw 1.5%;
     width: 97%;
   }
-  #displayImages{
+
+  #displayImages {
     width: 40%;
     margin: 10px;
   }
-  #rightDiv{
+
+  #rightDiv {
     padding-left: 0;
   }
 
   /*About me page*/
-  #containerAboutMe{
+  #containerAboutMe {
     display: grid;
     grid-template-rows: 13% 87%;
   }
-  #displayImagesAboutMe{
+
+  #displayImagesAboutMe {
     width: 50%;
     margin: auto 25%;
   }
-  #emailInput{
+
+  /* Email signup form */
+  #emailInput {
     font-size: .8em;
     width: 130%;
   }
-  #emailSignUp{
-    width: 60%;
+
+  #emailSignUp {
+    width: 85%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
   }
-  .bottomDiv{
+
+  #emailSignUp label {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #emailInput {
+    width: 100%;
+    min-width: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  #emailButton {
+    align-self: flex-start;
+  }
+
+  .bottomDiv {
     margin-top: 2em;
   }
-  
+
+  /* Header changes */
+  #navBarRight {
+    margin-left: auto;
+    margin-right: 2vw;
+  }
+
+  #basic-nav-dropdown+.dropdown-menu {
+    right: 0;
+    left: auto;
+  }
 }
-@media(min-width: 539px) and ( max-width: 1065px) and (orientation: portrait){
-  .container{
+
+@media(min-width: 539px) and (max-width: 1065px) and (orientation: portrait) {
+  .container {
     width: 375px;
     display: block;
   }
+
   /* #images{
     height: 50vh;
   } */
@@ -135,174 +194,230 @@
     color: black;
     font-size: 1.1vh;
   } */
-  #h3{
+  #h3 {
     font-size: 1.3vh;
   }
-  #question{
-    width: 75%;
-    font-size: 1.1em;
+
+  #question {
+    width: 80%;
+    font-size: 1em;
     color: black;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2vh;
     text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
-  .flip-card-front, .flip-card-back {
+
+  .flip-card-front,
+  .flip-card-back {
     color: black;
-    border-left-color:#eee;
-    border-radius:2px;
-    border-right-color:#eee;
-    border-top-color:#ddd;
-    box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
-    box-sizing:border-box;
+    border-left-color: #eee;
+    border-radius: 2px;
+    border-right-color: #eee;
+    border-top-color: #ddd;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
+    box-sizing: border-box;
   }
-  .flip-card-front img, .flip-card-back img{
-    border:solid 2px;
-    border-bottom-color:#ffe;
-    border-left-color:#eed;
-    border-right-color:#eed;
-    border-top-color:#ccb;
+
+  .flip-card-front img,
+  .flip-card-back img {
+    border: solid 2px;
+    border-bottom-color: #ffe;
+    border-left-color: #eed;
+    border-right-color: #eed;
+    border-top-color: #ccb;
     width: 100%;
-    max-height:100%;
-    max-width:100%;
+    max-height: 100%;
+    max-width: 100%;
   }
-  #containerAboutMe{
+
+  #containerAboutMe {
     display: grid;
     grid-template-columns: 30% 65%;
   }
-  #displayImagesAboutMe{
+
+  #displayImagesAboutMe {
     width: 70%;
     margin: auto 15%;
 
   }
-  #containerLeft, #containerRight{
+
+  #containerLeft,
+  #containerRight {
     margin: 5%;
     width: 90%;
     padding: 3vw;
   }
-  .left{
+
+  .left {
     padding-left: 1vw;
   }
-  
+
+  #navBarRight {
+    margin-left: auto;
+    margin-right: 2vw;
+  }
+
+  #navBarRight .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
 }
-@media(min-width: 539px) and ( max-width: 1065px) and (orientation: landscape){
-  #images{
+
+@media(min-width: 539px) and (max-width: 1366px) and (orientation: landscape) {
+  #images {
     height: 100vh;
   }
+
   /* #carouselImages{
     height: 100vh;
   } */
-  #question{
-    width: 75%;
-    font-size: 1.1em;
+  #question {
+    width: 80%;
+    font-size: 1em;
     color: black;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2vh;
     text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
-  .flip-card-front, .flip-card-back {
+
+  .flip-card-front,
+  .flip-card-back {
     color: black;
-    border-left-color:#eee;
-    border-radius:2px;
-    border-right-color:#eee;
-    border-top-color:#ddd;
-    box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
-    box-sizing:border-box;
+    border-left-color: #eee;
+    border-radius: 2px;
+    border-right-color: #eee;
+    border-top-color: #ddd;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
+    box-sizing: border-box;
   }
-  .flip-card-front img, .flip-card-back img{
-    border:solid 2px;
-    border-bottom-color:#ffe;
-    border-left-color:#eed;
-    border-right-color:#eed;
-    border-top-color:#ccb;
+
+  .flip-card-front img,
+  .flip-card-back img {
+    border: solid 2px;
+    border-bottom-color: #ffe;
+    border-left-color: #eed;
+    border-right-color: #eed;
+    border-top-color: #ccb;
     width: 100%;
-    max-height:100%;
-    max-width:100%;
+    max-height: 100%;
+    max-width: 100%;
   }
-  #containerAboutMe{
+
+  #containerAboutMe {
     display: grid;
     grid-template-columns: 30% 65%;
   }
-  #displayImagesAboutMe{
+
+  #displayImagesAboutMe {
     width: 70%;
     margin: auto 15%;
   }
-  #containerLeft, #containerRight{
+
+  #containerLeft,
+  #containerRight {
     margin: 3vw;
     width: 95%;
     padding: 3vw;
   }
-  
+
+  #navBarRight {
+    margin-left: auto;
+    margin-right: 2vw;
+  }
+
+  #navBarRight .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+
 }
-@media(min-width: 1065px){
-  .container{
+
+@media(min-width: 1367px) {
+  .container {
     padding-left: 10vw;
     border: 8px inset rgba(201, 201, 201, 0.851);
   }
+
   /* #caption{
     height: 10vh;
     color: black;
     font-size: 1.5vh;
   } */
-  #h3{
+  #h3 {
     font-size: 2vh;
   }
 
-  #containerAboutMe{
+  #containerAboutMe {
     display: grid;
     grid-template-columns: 30% 65%;
   }
-  #displayImagesAboutMe{
+
+  #displayImagesAboutMe {
     width: 70%;
     margin: auto 15%;
   }
 
-  #question{
-    width: 75%;
-    font-size: 1.2em;
+  #question {
+    width: 80%;
+    font-size: 1em;
     color: black;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2vh;
     text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
-  .flip-card-front, .flip-card-back {
+
+  .flip-card-front,
+  .flip-card-back {
     color: black;
-    border-left-color:#eee;
-    border-radius:2px;
-    border-right-color:#eee;
-    border-top-color:#ddd;
-    box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
-    box-sizing:border-box;
+    border-left-color: #eee;
+    border-radius: 2px;
+    border-right-color: #eee;
+    border-top-color: #ddd;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
+    box-sizing: border-box;
   }
-  .flip-card-front img, .flip-card-back img{
-    border:solid 2px;
-    border-bottom-color:#ffe;
-    border-left-color:#eed;
-    border-right-color:#eed;
-    border-top-color:#ccb;
+
+  .flip-card-front img,
+  .flip-card-back img {
+    border: solid 2px;
+    border-bottom-color: #ffe;
+    border-left-color: #eed;
+    border-right-color: #eed;
+    border-top-color: #ccb;
     width: 100%;
-    max-height:100%;
-    max-width:100%;
+    max-height: 100%;
+    max-width: 100%;
   }
-  #containerLeft{
+
+  #containerLeft {
     display: grid;
     grid-template-columns: 25% 73%;
     margin: 3vw;
   }
-  #containerRight{
+
+  #containerRight {
     display: grid;
     grid-template-columns: 73% 25%;
     margin: 3vw;
   }
-  #rightDiv, #display{
+
+  #rightDiv,
+  #display {
     display: grid;
     grid-template-rows: 45% 50%;
   }
-  #displayImages{
+
+  #displayImages {
     margin-left: auto;
     margin-right: auto;
   }
 }
-

@@ -14,7 +14,7 @@ const Services = () => {
         <div id="display"><img id="displayImages" alt="one on one training" src={Ashley}>
         </img><img id="displayImages" class="second" alt="Nathania pushing sled" src={Nathania}></img></div>
         <div id="textDiv" class="left">
-          <h2>In Person: One on One/Couples Training</h2>
+          <h2>In Person: One on One Training</h2>
           <p id="pTag">Train one-on-one, or with a spouse, friend or co-worker. With a custom designed fitness program for you that is designed to reach your fitness goals faster and safer than you would on your own. </p>
           <p id="pTag">You will be provided accountability and motivation that you need to stay on track, and your program will be frequently adjusted to make better progress and avoid plateaus. Modifications can be made to any exercise, if necessary, depending on varying fitness levels or presence of any pre-existing injuries.</p>
           <p id="pTag">All In person sessions are 50 minutes long, and include: </p>

@@ -1,13 +1,11 @@
+@use 'Theme.scss' as theme;
 #parent{
-  // display: flex;
-  // flex-direction: row;
-  // flex-wrap: wrap;
   margin: 3vw;
 }
 #contacts{
   width: 350px;
   height: 30vm;
-  border: 1px solid black;
+  border: 1px solid theme.$theme-text;
   margin: 1.5vw;
 }
 #longText{
@@ -19,7 +17,7 @@
 }
 #displayContacts:hover, #toggleButton:hover{
   background-color: darkred;
-  color: white;
+  color: theme.$theme-background;
 }
 #text, #longText, #textDanger, #textSuccess{
   margin: 0;
@@ -43,9 +41,9 @@ h1{
   padding: 5px;
 }
 #deleteX:hover{
-  background-color: red;
+  background-color: theme.$theme-accent;
   border-radius: 3px;
-  color: black;
+  color: theme.$theme-text;
 }
 #modal{
   margin-top: 20%;

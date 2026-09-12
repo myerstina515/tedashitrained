@@ -1,12 +1,9 @@
+@use 'Theme.scss' as theme;
 #containerLeft{
   display: grid;
   grid-template-columns: 30% 68%;
-  // margin: 3vw;
-  border: 1px black solid;
+  border: 1px theme.$theme-text solid;
   padding: 2vw;
-  // #displayImages{
-  //   height: 40%;
-  // }
   #textDiv{
     margin-left: 5px;
   }
@@ -14,12 +11,8 @@
 #containerRight{
   display: grid;
   grid-template-columns: 68% 30%;
-  // margin: 3vw;
-  border: 1px black solid;
+  border: 1px theme.$theme-text solid;
   padding: 2vw;
-  // #displayImages{
-  //   // margin-left: 15px;
-  // }
 }
 #displayImages{
   width: 100%;
