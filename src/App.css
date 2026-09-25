@@ -267,9 +267,9 @@
 }
 
 @media(min-width: 539px) and (max-width: 1366px) and (orientation: landscape) {
-  #images {
+  /* #images {
     height: 100vh;
-  }
+  } */
 
   /* #carouselImages{
     height: 100vh;
