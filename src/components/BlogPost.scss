@@ -1,8 +1,9 @@
+@use 'Theme.scss' as theme;
 #blog-post {
   min-height: 60vh;
   padding: 48px 20px 96px;
-  background: #ffffff;
-  color: #23272b;
+  background: theme.$theme-background;
+  color: theme.$theme-text;
 
   .blog-post-container {
     width: min(1120px, 100%);
@@ -18,7 +19,7 @@
     align-items: center;
     gap: 8px;
     margin-bottom: 32px;
-    color: #4e565d;
+    color: theme.$theme-secondary;
     font-size: .95rem;
     font-weight: 600;
     text-decoration: none;
@@ -26,7 +27,7 @@
   }
 
   .blog-post-back-link:hover {
-    color: #111;
+    color: theme.$theme-text;
     text-decoration: none;
   }
 
@@ -39,7 +40,7 @@
     border-radius: 18px;
     margin-bottom: 48px;
     box-shadow: 0 16px 40px rgba(0,0,0,.12);
-    background: #f5f5f5;
+    background: theme.$theme-surface;
   }
 
   .blog-post-hero img {
@@ -59,7 +60,7 @@
 
   .blog-post-eyebrow {
     margin: 0 0 10px;
-    color: #777;
+    color: theme.$theme-secondary;
     font-size: .82rem;
     font-weight: 700;
     letter-spacing: .12em;
@@ -68,7 +69,7 @@
 
   .blog-post-heading h1 {
     margin: 0;
-    color: #15181b;
+    color: theme.$theme-text;
     font-size: clamp(2.4rem, 5vw, 4.3rem);
     line-height: 1.08;
     font-weight: 700;
@@ -77,7 +78,7 @@
   .blog-post-date {
     display: block;
     margin-top: 22px;
-    color: #666;
+    color: theme.$theme-secondary;
     font-size: .95rem;
     font-weight: 600;
   }
@@ -89,7 +90,7 @@
   .blog-post-body {
     width: min(760px, 100%);
     margin: 0 auto;
-    color: #333;
+    color: theme.$theme-text;
     font-size: 1.08rem;
     line-height: 1.85;
   }
@@ -103,7 +104,7 @@
   .blog-post-body h3,
   .blog-post-body h4 {
     margin: 2em 0 .7em;
-    color: #15181b;
+    color: theme.$theme-text;
     line-height: 1.2;
     font-weight: 700;
   }
@@ -140,14 +141,14 @@
   .blog-post-body blockquote {
     margin: 2.5em 0;
     padding-left: 24px;
-    border-left: 4px solid #d62b2b;
+    border-left: 4px solid theme.$theme-accent;
     font-size: 1.15rem;
     font-style: italic;
-    color: #555;
+    color: theme.$theme-secondary;
   }
 
   .blog-post-body a {
-    color: #d62b2b;
+    color: theme.$theme-accent;
     font-weight: 600;
     text-decoration: underline;
     text-underline-offset: 3px;
@@ -155,7 +156,7 @@
 
   .blog-post-status {
     text-align: center;
-    color: #666;
+    color: theme.$theme-secondary;
     font-size: 1rem;
   }
 }

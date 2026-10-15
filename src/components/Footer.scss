@@ -1,23 +1,20 @@
-.footer{
-  background-color: #292b2c;
-  color:white;
+@use 'Theme.scss' as theme;
+.footer {
+  background-color: theme.$theme-primary;
+  color: theme.$theme-background;
   text-align: center;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  position: fixed;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
-  bottom: 0;
-  left: 0;
-  height: 110px;
-  z-index: 9999;
-  a{
-    color:#F2EBEB;
+  height: auto;
+  padding: 12px 0;
+
+  a {
+    color: theme.$theme-background;
     text-decoration: none;
   }
-
 }
-#icon{
-  margin: 0 10px 20px 10px;
-  // padding-bottom: 20px;
+#icon {
+  margin: 0 10px 5px 10px;
 }
 // .footerDiv{
 //   position: fixed;

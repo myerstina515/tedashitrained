@@ -1,12 +1,12 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
-import Logo from '../assets/FBFLogo.JPG'
+import Logo from '../assets/FBF_logo_new.png'
 
 const Header = () => {
   return (
     <>
-      <Navbar id="header" bg="dark" variant="dark">
-        <img id="logo" alt="Tedashi Trained Logo Kettlebell" src={Logo}></img>
+      <Navbar id="header" variant="dark">
+        <img id="logo" alt="Forever Body Fitness Logo" src={Logo}></img>
         <Nav className="justify-content-end" id="navBarRight">
           <NavDropdown title="Menu" id="basic-nav-dropdown">
             <NavDropdown.Item id="item" href="/">Home</NavDropdown.Item>

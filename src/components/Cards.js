@@ -17,7 +17,7 @@ const Cards = () => {
       <div class="container2">
         <div class="flip-card">
           <div class="flip-card-inner">
-            <div id="stephanie" class="flip-card-front">
+            <div class="flip-card-front">
               <img class="cardBackground" alt="Health & Wellness Coaching" src={Filler} />
 
               <a href="./Services" id="cardDesc">Health & Wellness Coaching</a>
@@ -39,7 +39,7 @@ const Cards = () => {
         </div>
         <div class="flip-card">
           <div class="flip-card-inner">
-            <div id="stephanie" class="flip-card-front">
+            <div class="flip-card-front">
               <img class="cardBackground" alt="One on One Training" src={Nora} />
 
               <a id="cardDesc" href="/services">One on One Training</a>
@@ -61,7 +61,7 @@ const Cards = () => {
         </div>
         <div class="flip-card">
           <div class="flip-card-inner">
-            <div id="stephanie" class="flip-card-front">
+            <div class="flip-card-front">
               <img class="cardBackground" alt="Online Training" src={Adi} />
 
               <a href="/Services" id="cardDesc">Online Training</a>
@@ -84,7 +84,7 @@ const Cards = () => {
 
         <div class="flip-card">
           <div class="flip-card-inner">
-            <div id="stephanie" class="flip-card-front">
+            <div class="flip-card-front">
               <img class="cardBackground" alt="Online Training" src={InBody} />
 
               <a href="/Services" id="cardDesc">InBody Scanning</a>

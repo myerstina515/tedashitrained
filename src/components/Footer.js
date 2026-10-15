@@ -5,7 +5,7 @@ import {
   faFacebook,
   faInstagram
 } from "@fortawesome/free-brands-svg-icons";
-import Logo from '../assets/FBFLogo.JPG';
+import Logo from '../assets/FBF_logo_new.png';
 import Advocare from '../assets/advocare-logo-black-and-white.png';
 
 
@@ -17,7 +17,7 @@ function Footer() {
         
           
         {/* <p id="footer"> */}
-          <img id="logo2" src={Logo} alt="Tedashi Trained Kettlebell Logo (small)"/>Forever Body Fitness &copy; 2021
+          <img id="logo2" src={Logo} alt="Forever Body Fitness Logo (small)"/>Forever Body Fitness &copy; 2021
         
         {/* </p> */}
         <br />

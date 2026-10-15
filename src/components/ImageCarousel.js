@@ -1,14 +1,14 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import Image2 from '../assets/NathaniaTesting2.jpg';
-import Image1 from '../assets/ShieldTesting3.jpg';
-import Image3 from '../assets/TandCTesting.jpg';
+import Image2 from '../assets/FBF_Nathania_TRX.png';
+import Image1 from '../assets/FBF_Tedashi_Shield.png';
+import Image3 from '../assets/FBF_Christina_Tedashi_TRX.png';
 
 
 const ImageCarousel = () => {
   return (
     <>
-      <div id="testing">
+      <div id="carouselSection">
         <Carousel id="carousel" controls={false}>
           <Carousel.Item id="carouselImages" interval={5000}>
             <img

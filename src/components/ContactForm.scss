@@ -1,7 +1,8 @@
+@use 'Theme.scss' as theme;
 #contactUsForm{
   width: 95%;
-  border: .5px solid black;
-  box-shadow: lightgrey;
+  border: .5px solid theme.$theme-text;
+  box-shadow: theme.$theme-secondary;
   margin: 20px auto 0 auto;
   padding: 5vw;
 }
