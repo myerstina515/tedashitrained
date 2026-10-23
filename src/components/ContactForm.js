@@ -76,37 +76,40 @@ const ContactForm = (props) => {
       <div id="bodyArea">
         <Form onSubmit={handleSubmit} id="contactUsForm">
           <Form.Group controlId="formBasicEmail">
-            <Form.Label>Name</Form.Label>
-            <Form.Control onChange={handleChange} name="name" type="text"></Form.Control>
+            <Form.Label>Name <span className="text-danger">*</span></Form.Label>
+            <Form.Control onChange={handleChange} name="name" type="text" required></Form.Control>
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
-            <Form.Label>Today's Date</Form.Label>
+            <Form.Label>Today's Date <span className="text-danger">*</span></Form.Label>
             <Form.Control onChange={handleChange} name="date" type="date" required></Form.Control>
           </Form.Group>
           <Form.Group className="mb-3" onChange={handleChange}>
-            <Form.Label>How do you want to be contacted? (select one)</Form.Label>
+            <Form.Label>How do you want to be contacted? (select one) <span className="text-danger">*</span></Form.Label>
             <Form.Check
               type="radio"
               name="preferredContact"
               value="email"
               label="E-mail"
+              required
             />
             <Form.Check
               type="radio"
               name="preferredContact"
               label="Text message"
               value="Text message"
+              required
             />
             <Form.Check
               type="radio"
               name="preferredContact"
               label="Phone Call"
               value="Phone Call (provide general availability in 'Message' section below)"
+              required
             />
           </Form.Group>
           <Form.Group controlId="formBasicPassword">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control onChange={handleChange} type="text" name="emailAddress"></Form.Control>
+            <Form.Label>Email address {item.preferredContact === "email" && <span className="text-danger">*</span>}</Form.Label>
+            <Form.Control onChange={handleChange} type="text" name="emailAddress" required={item.preferredContact === "email"}></Form.Control>
             <Form.Group onChange={handleChange}>
               <Form.Check
                 type="checkbox"
@@ -117,11 +120,11 @@ const ContactForm = (props) => {
             </Form.Group>
           </Form.Group>
           <Form.Group>
-            <Form.Label>Phone Number</Form.Label>
-            <Form.Control onChange={handleChange} type="text" name="phoneNumber"></Form.Control>
+            <Form.Label>Phone Number {(item.preferredContact === "Text message" || item.preferredContact === "Phone Call (provide general availability in 'Message' section below)") && <span className="text-danger">*</span>}</Form.Label>
+            <Form.Control onChange={handleChange} type="text" name="phoneNumber" required={item.preferredContact === "Text message" || item.preferredContact === "Phone Call (provide general availability in 'Message' section below)"}></Form.Control>
           </Form.Group>
           <Form.Group className="mb-3" onChange={handleChange}>
-            <Form.Label>Training Type (select one)</Form.Label>
+            <Form.Label>Training Type (select one) <span className="text-danger">*</span></Form.Label>
             <Form.Check
               type="radio"
               name="trainingType"
