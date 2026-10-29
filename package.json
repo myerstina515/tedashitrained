@@ -23,7 +23,7 @@
     "@testing-library/user-event": "^12.7.2",
     "axios": "^1.14.0",
     "bootstrap": "^4.6.0",
-    "heroku": "^10.12.0",
+    "heroku": "^11.0.0",
     "react": "^18.0.0",
     "react-bootstrap": "^1.6.6",
     "react-dom": "^18.0.0",
